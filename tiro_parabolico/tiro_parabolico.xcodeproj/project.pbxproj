@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9611E74C443006C0C30 /* AppDelegate.swift */; };
+		2877A9641E74C443006C0C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9631E74C443006C0C30 /* ViewController.swift */; };
+		2877A9671E74C443006C0C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2877A9651E74C443006C0C30 /* Main.storyboard */; };
+		2877A9691E74C443006C0C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2877A9681E74C443006C0C30 /* Assets.xcassets */; };
+		2877A96C1E74C443006C0C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2877A96A1E74C443006C0C30 /* LaunchScreen.storyboard */; };
+		2877A9771E74C443006C0C30 /* tiro_parabolicoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9761E74C443006C0C30 /* tiro_parabolicoTests.swift */; };
+		2877A9821E74C443006C0C30 /* tiro_parabolicoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2877A9731E74C443006C0C30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2877A9561E74C443006C0C30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2877A95D1E74C443006C0C30;
+			remoteInfo = tiro_parabolico;
+		};
+		2877A97E1E74C443006C0C30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2877A9561E74C443006C0C30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2877A95D1E74C443006C0C30;
+			remoteInfo = tiro_parabolico;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2877A95E1E74C443006C0C30 /* tiro_parabolico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiro_parabolico.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2877A9611E74C443006C0C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2877A9631E74C443006C0C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2877A9661E74C443006C0C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2877A9681E74C443006C0C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2877A96B1E74C443006C0C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2877A96D1E74C443006C0C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2877A9721E74C443006C0C30 /* tiro_parabolicoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiro_parabolicoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2877A9761E74C443006C0C30 /* tiro_parabolicoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiro_parabolicoTests.swift; sourceTree = "<group>"; };
+		2877A9781E74C443006C0C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2877A97D1E74C443006C0C30 /* tiro_parabolicoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiro_parabolicoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiro_parabolicoUITests.swift; sourceTree = "<group>"; };
+		2877A9831E74C443006C0C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2877A95B1E74C443006C0C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877A96F1E74C443006C0C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877A97A1E74C443006C0C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2877A9551E74C443006C0C30 = {
+			isa = PBXGroup;
+			children = (
+				2877A9601E74C443006C0C30 /* tiro_parabolico */,
+				2877A9751E74C443006C0C30 /* tiro_parabolicoTests */,
+				2877A9801E74C443006C0C30 /* tiro_parabolicoUITests */,
+				2877A95F1E74C443006C0C30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2877A95F1E74C443006C0C30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2877A95E1E74C443006C0C30 /* tiro_parabolico.app */,
+				2877A9721E74C443006C0C30 /* tiro_parabolicoTests.xctest */,
+				2877A97D1E74C443006C0C30 /* tiro_parabolicoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2877A9601E74C443006C0C30 /* tiro_parabolico */ = {
+			isa = PBXGroup;
+			children = (
+				2877A9611E74C443006C0C30 /* AppDelegate.swift */,
+				2877A9631E74C443006C0C30 /* ViewController.swift */,
+				2877A9651E74C443006C0C30 /* Main.storyboard */,
+				2877A9681E74C443006C0C30 /* Assets.xcassets */,
+				2877A96A1E74C443006C0C30 /* LaunchScreen.storyboard */,
+				2877A96D1E74C443006C0C30 /* Info.plist */,
+			);
+			path = tiro_parabolico;
+			sourceTree = "<group>";
+		};
+		2877A9751E74C443006C0C30 /* tiro_parabolicoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2877A9761E74C443006C0C30 /* tiro_parabolicoTests.swift */,
+				2877A9781E74C443006C0C30 /* Info.plist */,
+			);
+			path = tiro_parabolicoTests;
+			sourceTree = "<group>";
+		};
+		2877A9801E74C443006C0C30 /* tiro_parabolicoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */,
+				2877A9831E74C443006C0C30 /* Info.plist */,
+			);
+			path = tiro_parabolicoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2877A95D1E74C443006C0C30 /* tiro_parabolico */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2877A9861E74C443006C0C30 /* Build configuration list for PBXNativeTarget "tiro_parabolico" */;
+			buildPhases = (
+				2877A95A1E74C443006C0C30 /* Sources */,
+				2877A95B1E74C443006C0C30 /* Frameworks */,
+				2877A95C1E74C443006C0C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tiro_parabolico;
+			productName = tiro_parabolico;
+			productReference = 2877A95E1E74C443006C0C30 /* tiro_parabolico.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2877A9711E74C443006C0C30 /* tiro_parabolicoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2877A9891E74C443006C0C30 /* Build configuration list for PBXNativeTarget "tiro_parabolicoTests" */;
+			buildPhases = (
+				2877A96E1E74C443006C0C30 /* Sources */,
+				2877A96F1E74C443006C0C30 /* Frameworks */,
+				2877A9701E74C443006C0C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2877A9741E74C443006C0C30 /* PBXTargetDependency */,
+			);
+			name = tiro_parabolicoTests;
+			productName = tiro_parabolicoTests;
+			productReference = 2877A9721E74C443006C0C30 /* tiro_parabolicoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2877A97C1E74C443006C0C30 /* tiro_parabolicoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2877A98C1E74C443006C0C30 /* Build configuration list for PBXNativeTarget "tiro_parabolicoUITests" */;
+			buildPhases = (
+				2877A9791E74C443006C0C30 /* Sources */,
+				2877A97A1E74C443006C0C30 /* Frameworks */,
+				2877A97B1E74C443006C0C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2877A97F1E74C443006C0C30 /* PBXTargetDependency */,
+			);
+			name = tiro_parabolicoUITests;
+			productName = tiro_parabolicoUITests;
+			productReference = 2877A97D1E74C443006C0C30 /* tiro_parabolicoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2877A9561E74C443006C0C30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Marco Peyrot";
+				TargetAttributes = {
+					2877A95D1E74C443006C0C30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					2877A9711E74C443006C0C30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2877A95D1E74C443006C0C30;
+					};
+					2877A97C1E74C443006C0C30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2877A95D1E74C443006C0C30;
+					};
+				};
+			};
+			buildConfigurationList = 2877A9591E74C443006C0C30 /* Build configuration list for PBXProject "tiro_parabolico" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2877A9551E74C443006C0C30;
+			productRefGroup = 2877A95F1E74C443006C0C30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2877A95D1E74C443006C0C30 /* tiro_parabolico */,
+				2877A9711E74C443006C0C30 /* tiro_parabolicoTests */,
+				2877A97C1E74C443006C0C30 /* tiro_parabolicoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2877A95C1E74C443006C0C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877A96C1E74C443006C0C30 /* LaunchScreen.storyboard in Resources */,
+				2877A9691E74C443006C0C30 /* Assets.xcassets in Resources */,
+				2877A9671E74C443006C0C30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877A9701E74C443006C0C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877A97B1E74C443006C0C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2877A95A1E74C443006C0C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877A9641E74C443006C0C30 /* ViewController.swift in Sources */,
+				2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877A96E1E74C443006C0C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877A9771E74C443006C0C30 /* tiro_parabolicoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877A9791E74C443006C0C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877A9821E74C443006C0C30 /* tiro_parabolicoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2877A9741E74C443006C0C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2877A95D1E74C443006C0C30 /* tiro_parabolico */;
+			targetProxy = 2877A9731E74C443006C0C30 /* PBXContainerItemProxy */;
+		};
+		2877A97F1E74C443006C0C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2877A95D1E74C443006C0C30 /* tiro_parabolico */;
+			targetProxy = 2877A97E1E74C443006C0C30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2877A9651E74C443006C0C30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2877A9661E74C443006C0C30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2877A96A1E74C443006C0C30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2877A96B1E74C443006C0C30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2877A9841E74C443006C0C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2877A9851E74C443006C0C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2877A9871E74C443006C0C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tiro_parabolico/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolico";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2877A9881E74C443006C0C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = tiro_parabolico/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolico";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2877A98A1E74C443006C0C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = tiro_parabolicoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolicoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tiro_parabolico.app/tiro_parabolico";
+			};
+			name = Debug;
+		};
+		2877A98B1E74C443006C0C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = tiro_parabolicoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolicoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tiro_parabolico.app/tiro_parabolico";
+			};
+			name = Release;
+		};
+		2877A98D1E74C443006C0C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = tiro_parabolicoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolicoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = tiro_parabolico;
+			};
+			name = Debug;
+		};
+		2877A98E1E74C443006C0C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = tiro_parabolicoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolicoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = tiro_parabolico;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2877A9591E74C443006C0C30 /* Build configuration list for PBXProject "tiro_parabolico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877A9841E74C443006C0C30 /* Debug */,
+				2877A9851E74C443006C0C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2877A9861E74C443006C0C30 /* Build configuration list for PBXNativeTarget "tiro_parabolico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877A9871E74C443006C0C30 /* Debug */,
+				2877A9881E74C443006C0C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2877A9891E74C443006C0C30 /* Build configuration list for PBXNativeTarget "tiro_parabolicoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877A98A1E74C443006C0C30 /* Debug */,
+				2877A98B1E74C443006C0C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2877A98C1E74C443006C0C30 /* Build configuration list for PBXNativeTarget "tiro_parabolicoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877A98D1E74C443006C0C30 /* Debug */,
+				2877A98E1E74C443006C0C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2877A9561E74C443006C0C30 /* Project object */;
+}
