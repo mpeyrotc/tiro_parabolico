@@ -35,9 +35,14 @@ class Shot: NSObject {
         if time < 0 || time > finalTime() {
             return nil
         }
-        return initialXPos + (initialVelocity * cos(angle) * time)
+        return initialXPos + (getXVelocity() * time)
     }
     
+    /*
+     * get the y postion of the projectile for time t, if the
+     * time is less than 0 or more than the point where the projectile
+     * reaches y position = 0, it returns nil.
+     */
     public func yForTime(_ time: Double) -> Double? {
         if time < 0 || time > finalTime() {
             return nil
@@ -46,16 +51,25 @@ class Shot: NSObject {
         return initialYPos + (initialVelocity * sin(angle)) + (0.5 * GRAVITY * pow(time, 2))
     }
     
+    /*
+     * returns the whole amount of time that the projectile 
+     * will take to reach y position = 0
+     */
     public func finalTime() -> Double {
         return (initialVelocity * sin(angle)) / -GRAVITY
     }
     
+    /*
+     * returns a list of x,y coordinates that span from start to end and are divided
+     * by intervals of 1 unit.
+     */
     public func positions(_ start: Double, _ end: Double) -> [(Double, Double)] {
-        if start < 0 {
-            err
+        var result:[(Double, Double)] = []
+        
+        if start < 0 || end < start || end > finalTime() {
+            return result
         }
         
-        var result:[(Double, Double)] = []
         var i = start
         
         while(i <= end) {
@@ -64,5 +78,29 @@ class Shot: NSObject {
         }
         
         return result
+    }
+    
+    public func getInitialXPos() -> Double {
+        return initialXPos
+    }
+    
+    public func getInitialYPos() -> Double {
+        return initialYPos
+    }
+    
+    public func getXVelocity(_ time: Double) -> Double {
+        return initialVelocity * cos(angle)
+    }
+    
+    public func getYVelocity(_ time: Double) -> Double {
+        return initialVelocity + (GRAVITY * time)
+    }
+    
+    public func getAngle() -> Double {
+        return angle
+    }
+    
+    public func getVelocity() -> Double {
+        return initialVelocity
     }
 }
