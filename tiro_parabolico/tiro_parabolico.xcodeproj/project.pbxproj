@@ -15,6 +15,9 @@
 		2877A9771E74C443006C0C30 /* tiro_parabolicoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9761E74C443006C0C30 /* tiro_parabolicoTests.swift */; };
 		2877A9821E74C443006C0C30 /* tiro_parabolicoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */; };
 		288E06D41E77188E00F3E049 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288E06D31E77188E00F3E049 /* Shot.swift */; };
+		4D62002A1E79B05D00339DD7 /* ChartsAPI in Resources */ = {isa = PBXBuildFile; fileRef = 4D6200291E79B05D00339DD7 /* ChartsAPI */; };
+		4D6200371E79B0AA00339DD7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; };
+		4D6200381E79B0AA00339DD7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +35,49 @@
 			remoteGlobalIDString = 2877A95D1E74C443006C0C30;
 			remoteInfo = tiro_parabolico;
 		};
+		4D6200311E79B06D00339DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		4D6200331E79B06D00339DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		4D6200351E79B06D00339DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		4D6200391E79B0AA00339DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D6200231E79AC2100339DD7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D6200381E79B0AA00339DD7 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2877A95E1E74C443006C0C30 /* tiro_parabolico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiro_parabolico.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +94,8 @@
 		2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiro_parabolicoUITests.swift; sourceTree = "<group>"; };
 		2877A9831E74C443006C0C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288E06D31E77188E00F3E049 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		4D6200291E79B05D00339DD7 /* ChartsAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ChartsAPI; path = ../ChartsAPI; sourceTree = "<group>"; };
+		4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../ChartsAPI/Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6200371E79B0AA00339DD7 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +127,9 @@
 		2877A9551E74C443006C0C30 = {
 			isa = PBXGroup;
 			children = (
+				4D6200291E79B05D00339DD7 /* ChartsAPI */,
 				288E06D31E77188E00F3E049 /* Shot.swift */,
+				4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */,
 				2877A9601E74C443006C0C30 /* tiro_parabolico */,
 				2877A9751E74C443006C0C30 /* tiro_parabolicoTests */,
 				2877A9801E74C443006C0C30 /* tiro_parabolicoUITests */,
@@ -128,6 +178,16 @@
 			path = tiro_parabolicoUITests;
 			sourceTree = "<group>";
 		};
+		4D62002C1E79B06C00339DD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D6200321E79B06D00339DD7 /* Charts.framework */,
+				4D6200341E79B06D00339DD7 /* ChartsRealm.framework */,
+				4D6200361E79B06D00339DD7 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +198,12 @@
 				2877A95A1E74C443006C0C30 /* Sources */,
 				2877A95B1E74C443006C0C30 /* Frameworks */,
 				2877A95C1E74C443006C0C30 /* Resources */,
+				4D6200231E79AC2100339DD7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4D62003A1E79B0AA00339DD7 /* PBXTargetDependency */,
 			);
 			name = tiro_parabolico;
 			productName = tiro_parabolico;
@@ -196,6 +258,7 @@
 				TargetAttributes = {
 					2877A95D1E74C443006C0C30 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2EE5J4BL2L;
 						ProvisioningStyle = Automatic;
 					};
 					2877A9711E74C443006C0C30 = {
@@ -221,6 +284,12 @@
 			mainGroup = 2877A9551E74C443006C0C30;
 			productRefGroup = 2877A95F1E74C443006C0C30 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4D62002C1E79B06C00339DD7 /* Products */;
+					ProjectRef = 4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2877A95D1E74C443006C0C30 /* tiro_parabolico */,
@@ -230,11 +299,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		4D6200321E79B06D00339DD7 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 4D6200311E79B06D00339DD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D6200341E79B06D00339DD7 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 4D6200331E79B06D00339DD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4D6200361E79B06D00339DD7 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 4D6200351E79B06D00339DD7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2877A95C1E74C443006C0C30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D62002A1E79B05D00339DD7 /* ChartsAPI in Resources */,
 				2877A96C1E74C443006C0C30 /* LaunchScreen.storyboard in Resources */,
 				2877A9691E74C443006C0C30 /* Assets.xcassets in Resources */,
 				2877A9671E74C443006C0C30 /* Main.storyboard in Resources */,
@@ -296,6 +390,11 @@
 			isa = PBXTargetDependency;
 			target = 2877A95D1E74C443006C0C30 /* tiro_parabolico */;
 			targetProxy = 2877A97E1E74C443006C0C30 /* PBXContainerItemProxy */;
+		};
+		4D62003A1E79B0AA00339DD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 4D6200391E79B0AA00339DD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,7 +512,9 @@
 		2877A9871E74C443006C0C30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2EE5J4BL2L;
 				INFOPLIST_FILE = tiro_parabolico/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolico";
@@ -425,7 +526,9 @@
 		2877A9881E74C443006C0C30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2EE5J4BL2L;
 				INFOPLIST_FILE = tiro_parabolico/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "itesm.tiro-parabolico";

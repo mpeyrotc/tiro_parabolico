@@ -52,7 +52,6 @@ class Shot: NSObject {
     
     public func positions(_ start: Double, _ end: Double) -> [(Double, Double)] {
         if start < 0 {
-            err
         }
         
         var result:[(Double, Double)] = []
