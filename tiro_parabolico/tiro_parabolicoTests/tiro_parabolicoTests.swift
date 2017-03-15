@@ -33,4 +33,31 @@ class tiro_parabolicoTests: XCTestCase {
         }
     }
     
+    func testFinalTime() {
+        let shot = Shot(20, 0, 0, 37)
+        assert(abs(shot.finalTime() - 2.44) < 0.1)
+    }
+    
+    func testDistance() {
+        let shot = Shot(20, 0, 0, 37)
+        assert(abs(shot.xForTime(2.44)! - 38.96) < 0.1)
+    }
+    
+    func testYVelocity() {
+        let shot = Shot(20, 0, 0, 37)
+        assert(abs(shot.getYVelocity(1.0) - 2.23) < 0.1)
+    }
+    
+    func testXVelocity() {
+        let shot = Shot(20, 0, 0, 37)
+        assert(abs(shot.getXVelocity(1.0) - 15.97) < 0.1)
+    }
+    
+    func testMaxHeight() {
+        let shot = Shot(20, 0, 0, 37)
+        print("#####\(shot.yForTime(shot.finalTime() / 2.0)!)####")
+        assert(abs(shot.yForTime(shot.finalTime() / 2)! - 7.38) < 0.1)
+    }
+    
+    
 }

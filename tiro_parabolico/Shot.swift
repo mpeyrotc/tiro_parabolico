@@ -23,7 +23,7 @@ class Shot: NSObject {
         self.initialVelocity = initialVelocity
         self.initialXPos = initialXPos
         self.initialYPos = initialYPos
-        self.angle = angle
+        self.angle = angle * 3.1416 / 180
     }
     
     /*
@@ -32,10 +32,10 @@ class Shot: NSObject {
      * reaches y position = 0, it returns nil.
      */
     public func xForTime(_ time: Double) -> Double? {
-        if time < 0 || time > finalTime() {
+        if time < 0 {
             return nil
         }
-        return initialXPos + (getXVelocity() * time)
+        return initialXPos + (getXVelocity(time) * time)
     }
     
     /*
@@ -44,11 +44,11 @@ class Shot: NSObject {
      * reaches y position = 0, it returns nil.
      */
     public func yForTime(_ time: Double) -> Double? {
-        if time < 0 || time > finalTime() {
+        if time < 0 {
             return nil
         }
         
-        return initialYPos + (initialVelocity * sin(angle)) + (0.5 * GRAVITY * pow(time, 2))
+        return initialYPos + (initialVelocity * sin(angle) * time) + (0.5 * GRAVITY * pow(time, 2))
     }
     
     /*
@@ -56,7 +56,7 @@ class Shot: NSObject {
      * will take to reach y position = 0
      */
     public func finalTime() -> Double {
-        return (initialVelocity * sin(angle)) / -GRAVITY
+        return ((initialVelocity * sin(angle)) / -GRAVITY) * 2
     }
     
     /*
@@ -66,7 +66,7 @@ class Shot: NSObject {
     public func positions(_ start: Double, _ end: Double) -> [(Double, Double)] {
         var result:[(Double, Double)] = []
         
-        if start < 0 || end < start || end > finalTime() {
+        if start < 0 || end < start {
             return result
         }
         
@@ -93,7 +93,7 @@ class Shot: NSObject {
     }
     
     public func getYVelocity(_ time: Double) -> Double {
-        return initialVelocity + (GRAVITY * time)
+        return (initialVelocity * sin(angle)) + (GRAVITY * time)
     }
     
     public func getAngle() -> Double {
