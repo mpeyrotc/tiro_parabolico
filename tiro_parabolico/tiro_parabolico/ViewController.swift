@@ -10,7 +10,10 @@ import UIKit
 import Charts
 
 class ViewController: UIViewController {
-    
+    @IBOutlet weak var yVelocityLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var lineChartView: LineChartView!
     
@@ -18,12 +21,19 @@ class ViewController: UIViewController {
     var lineChartDataSet = LineChartDataSet()
     var lineChartData = LineChartData()
     var index:Int = -1
+    var shot: Shot!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         yAxis = []
         setChart(yValues: yAxis)
+        shot = Shot(20, 0, 0, 85)
+        
+        yVelocityLabel.text = String(shot.getYVelocity(0))
+        distanceLabel.text = String(shot.xForTime(0)!)
+        heightLabel.text = String(shot.yForTime(0)!)
+        timeLabel.text = String(0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +65,7 @@ class ViewController: UIViewController {
     
     @IBAction func update(_ sender: UIStepper) {
         let value = Int(sender.value)
+        
         if yAxis.count < value {
             yAxis.append(value - 1)
             index += 1
@@ -63,6 +74,13 @@ class ViewController: UIViewController {
             index -= 1
         }
         setChart(yValues: yAxis)
+        
+        // Shot info
+        yVelocityLabel.text = String(shot.getYVelocity(sender.value))
+        distanceLabel.text = String(shot.xForTime(sender.value)!)
+        heightLabel.text = String(shot.yForTime(sender.value)!)
+        timeLabel.text = String(sender.value)
+
     }
     
 }
