@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		286795581E7A42A900C1C2FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286795571E7A42A900C1C2FD /* MainViewController.swift */; };
 		2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9611E74C443006C0C30 /* AppDelegate.swift */; };
 		2877A9641E74C443006C0C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9631E74C443006C0C30 /* ViewController.swift */; };
 		2877A9671E74C443006C0C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2877A9651E74C443006C0C30 /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		286795571E7A42A900C1C2FD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2877A95E1E74C443006C0C30 /* tiro_parabolico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiro_parabolico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2877A9611E74C443006C0C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2877A9631E74C443006C0C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				2877A9611E74C443006C0C30 /* AppDelegate.swift */,
 				2877A9631E74C443006C0C30 /* ViewController.swift */,
 				2877A9651E74C443006C0C30 /* Main.storyboard */,
+				286795571E7A42A900C1C2FD /* MainViewController.swift */,
 				2877A9681E74C443006C0C30 /* Assets.xcassets */,
 				2877A96A1E74C443006C0C30 /* LaunchScreen.storyboard */,
 				2877A96D1E74C443006C0C30 /* Info.plist */,
@@ -363,6 +366,7 @@
 				288E06D41E77188E00F3E049 /* Shot.swift in Sources */,
 				2877A9641E74C443006C0C30 /* ViewController.swift in Sources */,
 				2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */,
+				286795581E7A42A900C1C2FD /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

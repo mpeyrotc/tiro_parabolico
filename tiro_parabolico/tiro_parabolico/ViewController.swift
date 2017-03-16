@@ -23,12 +23,17 @@ class ViewController: UIViewController {
     var index:Int = -1
     var shot: Shot!
     
+    var initialVelocity: Double!
+    var startX: Double!
+    var startY: Double!
+    var angle: Double!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         yAxis = []
         setChart(yValues: yAxis)
-        shot = Shot(20, 0, 0, 85)
+        shot = Shot(initialVelocity, startX, startY, angle)
         
         yVelocityLabel.text = String(shot.getYVelocity(0))
         distanceLabel.text = String(shot.xForTime(0)!)
