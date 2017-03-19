@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     
     var questions: NSArray!
     var currentQuestion = -1
+    var currentAnswer: Double!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,22 +50,65 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func showNewQuestion(_ sender: Any) {
-        currentQuestion = (currentQuestion + 1) % 5
-        
+        //currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
+        currentQuestion = 1
         let dict = questions[currentQuestion] as! NSDictionary
-        questionTextArea.text = dict.value(forKey: "Pregunta") as! String?
         
+        // Create new question
+        var question:String = dict.value(forKey: "Pregunta") as! String
+        let subtype = dict.value(forKey: "SUBTYPE") as! String
+        
+        switch subtype {
+        case "DIST_GROUND":
+            let velocity = Int(arc4random_uniform(30) + 1)
+            let height = Int(arc4random_uniform(30) + 1)
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            question = question.replacingOccurrences(of: "ALTURA", with: String(height))
+            
+            let time = (Double(velocity) * sin(0) + sqrt(pow(Double(velocity) * sin(0), 2) - 4.0 * (0.5 * -9.8) * Double(height))) / 9.8
+            currentAnswer = (Double(velocity) * cos(0)) * time
+            break
+        case "DIST_TIME":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10)
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            
+            var time = 0.5
+            let time2 = 2.0 * (Double(velocity) * sin(Double(grados) * 3.1416 / 180)) / 9.8
+            
+            if time2 < 0.5 {
+                time = time2
+            }
+            
+            currentAnswer = (Double(velocity) * cos(Double(grados) * 3.1416 / 180)) * time
+            break
+        default:
+            // nothing
+            print("error, never should have got here.")
+        }
+        
+        // set question visible to the user
+        questionTextArea.text = question
         feedbackLabel.text = ""
         answerTextField.text = ""
     }
     
     @IBAction func submitAnswer(_ sender: Any) {
         let dict = questions[currentQuestion] as! NSDictionary
+        let type = dict.value(forKey: "TYPE") as! String
+        var isCorrect:Bool = false
         
-        if answerTextField.text == (dict.value(forKey: "Respuesta") as! String) {
-            feedbackLabel.text = "Correct!"
+        if type == "DYNAMIC" {
+            isCorrect = (abs(Double(answerTextField.text!)! - currentAnswer) < 0.1)
         } else {
-            feedbackLabel.text = "Try again."
+            isCorrect = (answerTextField.text == (dict.value(forKey: "Respuesta") as! String))
+        }
+        
+        if isCorrect {
+            feedbackLabel.text = "Correcto!"
+        } else {
+            feedbackLabel.text = "Inténtelo otra vez."
         }
     }
     

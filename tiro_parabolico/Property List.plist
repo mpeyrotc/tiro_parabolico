@@ -3,34 +3,52 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Respuesta</key>
-		<string>Respuesta 1</string>
 		<key>Pregunta</key>
-		<string>Pregunta 1</string>
+		<string>Considerando que te encuentras en un edificio a una altura de ALTURA metros, si lanzas una pelota a una velocidad de VELOCIDAD metros por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo?</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>DIST_GROUND</string>
 	</dict>
 	<dict>
-		<key>Respuesta</key>
-		<string>Respuesta 2</string>
 		<key>Pregunta</key>
-		<string>Pregunta 2</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. La velocidad con la que deja la boca del  cañón es de VELOCIDAD metros por segundo. ¿Cuál es la distancia que viaja el proyectil horizontalmente tras haber transcurrido 0.5 segundos? Si impacta el suelo antes, usar la posición donde impacta con el suelo.</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>DIST_TIME</string>
 	</dict>
 	<dict>
-		<key>Respuesta</key>
-		<string>Respuesta 3</string>
 		<key>Pregunta</key>
-		<string>Pregunta 3</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA, ¿Con qué velocidad salió del cañón?</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>VEL_DIST_TIME</string>
 	</dict>
 	<dict>
-		<key>Respuesta</key>
-		<string>Respuesta 4</string>
 		<key>Pregunta</key>
-		<string>Pregunta 4</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad VELOCIDAD y un ANGULO con respecto al suelo. ¿Cuál es su posición (x,y) después en el tiempo TIEMPO segundos?</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>POS_TIME</string>
 	</dict>
 	<dict>
-		<key>Respuesta</key>
-		<string>Respuesta 5</string>
 		<key>Pregunta</key>
-		<string>Pregunta 5</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad VELOCIDAD y un ANGULO con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima?</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>MAX_HEIGHT_TIME</string>
+	</dict>
+	<dict>
+		<key>Pregunta</key>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad VELOCIDAD y un ANGULO con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo?</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>DIST_GROUND_2</string>
 	</dict>
 </array>
 </plist>
