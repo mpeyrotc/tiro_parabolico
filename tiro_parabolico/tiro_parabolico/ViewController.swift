@@ -34,11 +34,10 @@ class ViewController: UIViewController {
         yAxis = []
         setChart(yValues: yAxis)
         shot = Shot(initialVelocity, startX, startY, angle)
-        
-        yVelocityLabel.text = String(shot.getYVelocity(0))
-        distanceLabel.text = String(shot.xForTime(0)!)
-        heightLabel.text = String(shot.yForTime(0)!)
-        timeLabel.text = String(0)
+        yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(0))
+        distanceLabel.text = String(format: "%.2f m", shot.xForTime(0)!)
+        heightLabel.text = String(format: "%.2f m", shot.yForTime(0)!)
+        timeLabel.text = String(format: "%.2f s", 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,11 +80,10 @@ class ViewController: UIViewController {
         setChart(yValues: yAxis)
         
         // Shot info
-        yVelocityLabel.text = String(shot.getYVelocity(sender.value))
-        distanceLabel.text = String(shot.xForTime(sender.value)!)
-        heightLabel.text = String(shot.yForTime(sender.value)!)
-        timeLabel.text = String(sender.value)
-
+        yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(sender.value))
+        distanceLabel.text = String(format: "%.2f m", shot.xForTime(sender.value)!)
+        heightLabel.text = String(format: "%.2f m", shot.yForTime(sender.value)!)
+        timeLabel.text = String(format: "%.2f s", sender.value)
     }
     
 }
