@@ -83,6 +83,63 @@ class MainViewController: UIViewController {
             
             currentAnswer = (Double(velocity) * cos(Double(grados) * 3.1416 / 180)) * time
             break
+        case "VEL_DIST_TIME":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10)
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(shot.finalTime()))
+            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: shot.xForTime(shot.finalTime())))
+            
+            currentAnswer = Double(velocity)
+            break
+        case "POSX_TIME":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10)
+            let time = Int(arc4random_uniform(2) + 1)
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = Double(shot.xForTime(Double(time))!)
+            break
+        case "POSY_TIME":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10)
+            let time = Int(arc4random_uniform(2) + 1)
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = Double(shot.yForTime(Double(time))!)
+            break
+        case "MAX_HEIGHT_TIME":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10)
+            
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = shot.finalTime() / 2.0
+            break
+        case "DIST_GROUND_2":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10)
+            
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = shot.finalTime()
+            break
         default:
             // nothing
             print("error, never should have got here.")

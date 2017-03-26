@@ -28,15 +28,23 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad VELOCIDAD y un ANGULO con respecto al suelo. ¿Cuál es su posición (x,y) después en el tiempo TIEMPO segundos?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos?</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
-		<string>POS_TIME</string>
+		<string>POSX_TIME</string>
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad VELOCIDAD y un ANGULO con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos?</string>
+		<key>TYPE</key>
+		<string>DYNAMIC</string>
+		<key>SUBTYPE</key>
+		<string>POSY_TIME</string>
+	</dict>
+	<dict>
+		<key>Pregunta</key>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima?</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -44,7 +52,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad VELOCIDAD y un ANGULO con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo?</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
