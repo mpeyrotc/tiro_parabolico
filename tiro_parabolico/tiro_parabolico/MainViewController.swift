@@ -37,8 +37,8 @@ class MainViewController: UIViewController {
     
 
     @IBAction func showNewQuestion(_ sender: Any) {
-        //currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
-        currentQuestion = 1
+        currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
+        //currentQuestion = 1
         let dict = questions[currentQuestion] as! NSDictionary
         
         // Create new question
