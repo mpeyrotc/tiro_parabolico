@@ -19,6 +19,7 @@ class ParametrosViewController: UIViewController {
     @IBOutlet weak var valueTimeTextField: UITextField!
     @IBOutlet weak var sgUnits: UISegmentedControl!
     
+    var units = "IS"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +50,14 @@ class ParametrosViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "parametrar" {
+        if segue.identifier != "parametrar" {
             let animationView = segue.destination as! ViewController
             
             animationView.initialVelocity = Double(initialVelocityTextField.text!)
             animationView.startX = Double(startXPosTextField.text!)
             animationView.startY = Double(startYPosTextField.text!)
             animationView.angle = Double(shotAngleTextField.text!)
+            animationView.units = units
         }
         
     }
@@ -73,5 +75,18 @@ class ParametrosViewController: UIViewController {
     @IBAction func unwindParametros(unwindSegue: UIStoryboardSegue) {
         
     }
-
+    
+    
+    @IBAction func changedUnits(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            units = "IS"
+            break;
+        case 1:
+            units = "ENGLISH"
+            break;
+        default:
+            break;
+        }
+    }
 }
