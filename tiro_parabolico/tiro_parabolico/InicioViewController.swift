@@ -30,5 +30,9 @@ class InicioViewController: UIViewController {
         
     }
     
+    @IBAction func unwindAcerca(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
 
 }

@@ -22,6 +22,7 @@
 		61E6467F1E8B1CE900587BE9 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */; };
 		61E646841E8B33E800587BE9 /* ParametrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E646831E8B33E800587BE9 /* ParametrosViewController.swift */; };
 		61E821B21E79022900220894 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E821B11E79022900220894 /* Property List.plist */; };
+		61F468211E8C3CB40052B829 /* AcercaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F468201E8C3CB40052B829 /* AcercaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		61E646831E8B33E800587BE9 /* ParametrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametrosViewController.swift; sourceTree = "<group>"; };
 		61E821B11E79022900220894 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		61F468201E8C3CB40052B829 /* AcercaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcercaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				2877A9611E74C443006C0C30 /* AppDelegate.swift */,
 				2877A9631E74C443006C0C30 /* ViewController.swift */,
 				2877A9651E74C443006C0C30 /* Main.storyboard */,
+				61F468201E8C3CB40052B829 /* AcercaViewController.swift */,
 				61E646831E8B33E800587BE9 /* ParametrosViewController.swift */,
 				61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */,
 				286795571E7A42A900C1C2FD /* MainViewController.swift */,
@@ -373,6 +376,7 @@
 				288E06D41E77188E00F3E049 /* Shot.swift in Sources */,
 				2877A9641E74C443006C0C30 /* ViewController.swift in Sources */,
 				2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */,
+				61F468211E8C3CB40052B829 /* AcercaViewController.swift in Sources */,
 				61E6467F1E8B1CE900587BE9 /* InicioViewController.swift in Sources */,
 				286795581E7A42A900C1C2FD /* MainViewController.swift in Sources */,
 			);
