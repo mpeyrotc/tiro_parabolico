@@ -14,10 +14,12 @@ import UIKit
 
 class Shot: NSObject {
     let GRAVITY = -9.81
+    let GRAVITY_EN = -32.0
     private let initialVelocity: Double!
     private let initialXPos: Double!
     private let initialYPos: Double!
     private let angle: Double!
+    private var units = "IS"
     
     init(_ initialVelocity:Double, _ initialXPos:Double, _ initialYPos:Double, _ angle:Double) {
         self.initialVelocity = initialVelocity
@@ -48,7 +50,14 @@ class Shot: NSObject {
             return nil
         }
         
-        return initialYPos + (initialVelocity * sin(angle) * time) + (0.5 * GRAVITY * pow(time, 2))
+        var result: Double!
+        if units == "IS" {
+            result = initialYPos + (initialVelocity * sin(angle) * time) + (0.5 * GRAVITY * pow(time, 2))
+        } else {
+            result = initialYPos + (initialVelocity * sin(angle) * time) + (0.5 * GRAVITY_EN * pow(time, 2))
+        }
+        
+        return result
     }
     
     /*
@@ -56,7 +65,15 @@ class Shot: NSObject {
      * will take to reach y position = 0
      */
     public func finalTime() -> Double {
-        return ((initialVelocity * sin(angle)) / -GRAVITY) * 2
+        var result: Double!
+        
+        if units == "IS" {
+            result = ((initialVelocity * sin(angle)) / -GRAVITY) * 2
+        } else {
+            result = ((initialVelocity * sin(angle)) / -GRAVITY_EN) * 2
+        }
+        
+        return result
     }
     
     /*
@@ -93,7 +110,15 @@ class Shot: NSObject {
     }
     
     public func getYVelocity(_ time: Double) -> Double {
-        return (initialVelocity * sin(angle)) + (GRAVITY * time)
+        var result: Double!
+        
+        if units == "IS" {
+            result = (initialVelocity * sin(angle)) + (GRAVITY * time)
+        } else {
+            result = (initialVelocity * sin(angle)) + (GRAVITY_EN * time)
+        }
+
+        return result
     }
     
     public func getAngle() -> Double {
@@ -102,5 +127,9 @@ class Shot: NSObject {
     
     public func getVelocity() -> Double {
         return initialVelocity
+    }
+    
+    public func setUnits(_ units: String) -> Void {
+        self.units = units
     }
 }
