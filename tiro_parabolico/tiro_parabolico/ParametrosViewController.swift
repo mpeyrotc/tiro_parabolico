@@ -10,10 +10,21 @@ import UIKit
 
 class ParametrosViewController: UIViewController {
 
+    @IBOutlet weak var initialVelocityTextField: UITextField!
+    @IBOutlet weak var startXPosTextField: UITextField!
+    @IBOutlet weak var startYPosTextField: UITextField!
+    @IBOutlet weak var shotAngleTextField: UITextField!
+    @IBOutlet weak var valueXTextField: UITextField!
+    @IBOutlet weak var valueYTextField: UITextField!
+    @IBOutlet weak var valueTimeTextField: UITextField!
+    @IBOutlet weak var sgUnits: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        resetValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +32,46 @@ class ParametrosViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    
+    // MARK: - Reset Values
+    
+    @IBAction func resetParemetros(_ sender: UIButton) {
+        resetValues()
+    }
+    func resetValues() {
+        initialVelocityTextField.text = String(20)
+        startXPosTextField.text = String(0)
+        startYPosTextField.text = String(0)
+        shotAngleTextField.text = String(85)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "parametrar" {
+            let animationView = segue.destination as! ViewController
+            
+            animationView.initialVelocity = Double(initialVelocityTextField.text!)
+            animationView.startX = Double(startXPosTextField.text!)
+            animationView.startY = Double(startYPosTextField.text!)
+            animationView.angle = Double(shotAngleTextField.text!)
+        }
+        
     }
-    */
+    
+    // relacionado con boton Atras
+    @IBAction func regresar(_ sender: UIBarButtonItem) {
+        guard(navigationController?.popViewController(animated: true)) != nil
+            else {
+                dismiss(animated: true, completion: nil)
+                return
+        }
+    }
+    
+    // unwind del view controller de la grafica
+    @IBAction func unwindParametros(unwindSegue: UIStoryboardSegue) {
+        
+    }
 
 }

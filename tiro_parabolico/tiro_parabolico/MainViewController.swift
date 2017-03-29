@@ -9,14 +9,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var initialVelocityTextField: UITextField!
-    @IBOutlet weak var startXPosTextField: UITextField!
-    @IBOutlet weak var startYPosTextField: UITextField!
-    @IBOutlet weak var shotAngleTextField: UITextField!
+   
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var questionTextArea: UITextView!
     @IBOutlet weak var feedbackLabel: UILabel!
-    
+   
     var questions: NSArray!
     var currentQuestion = -1
     var currentAnswer: Double!
@@ -25,7 +22,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        resetValues()
         questionTextArea.text = ""
         feedbackLabel.text = ""
         
@@ -38,16 +34,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func resetDefaultValues(_ sender: Any) {
-        resetValues()
-    }
     
-    func resetValues() {
-        initialVelocityTextField.text = String(20)
-        startXPosTextField.text = String(0)
-        startYPosTextField.text = String(0)
-        shotAngleTextField.text = String(85)
-    }
 
     @IBAction func showNewQuestion(_ sender: Any) {
         //currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
@@ -169,21 +156,22 @@ class MainViewController: UIViewController {
         }
     }
     
+    //relacionado con boton Atras
+    @IBAction func regresar(_ sender: UIBarButtonItem) {
+        guard(navigationController?.popViewController(animated: true)) != nil
+            else {
+                dismiss(animated: true, completion: nil)
+                return
+        }
+    }
     // MARK: - Navigation
 
     override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "animationSegue" {
-            let animationView = segue.destination as! ViewController
-            
-            animationView.initialVelocity = Double(initialVelocityTextField.text!)
-            animationView.startX = Double(startXPosTextField.text!)
-            animationView.startY = Double(startYPosTextField.text!)
-            animationView.angle = Double(shotAngleTextField.text!)
-        }
+    
     }
     
-    @IBAction func unwindAnimation(unwindSegue: UIStoryboardSegue) {
-        // Does nothing, used to get back to this view
-    }
+
+    
+    
 
 }
