@@ -37,8 +37,8 @@ class MainViewController: UIViewController {
     
 
     @IBAction func showNewQuestion(_ sender: Any) {
-        //currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
-        currentQuestion = 1
+        currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
+        //currentQuestion = 1
         let dict = questions[currentQuestion] as! NSDictionary
         
         // Create new question
@@ -53,6 +53,15 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "ALTURA", with: String(height))
             
             let time = (Double(velocity) * sin(0) + sqrt(pow(Double(velocity) * sin(0), 2) - 4.0 * (0.5 * -9.8) * Double(height))) / 9.8
+            currentAnswer = (Double(velocity) * cos(0)) * time
+            break
+        case "DIST_GROUND_EN":
+            let velocity = Int(arc4random_uniform(30) + 1) * 3
+            let height = Int(arc4random_uniform(30) + 1) * 3
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            question = question.replacingOccurrences(of: "ALTURA", with: String(height))
+            
+            let time = (Double(velocity) * sin(0) + sqrt(pow(Double(velocity) * sin(0), 2) - 4.0 * (0.5 * -32.0) * Double(height))) / 32.0
             currentAnswer = (Double(velocity) * cos(0)) * time
             break
         case "DIST_TIME":
@@ -70,10 +79,37 @@ class MainViewController: UIViewController {
             
             currentAnswer = (Double(velocity) * cos(Double(grados) * 3.1416 / 180)) * time
             break
+        case "DIST_TIME_EN":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10) * 3
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            
+            var time = 0.5
+            let time2 = 2.0 * (Double(velocity) * sin(Double(grados) * 3.1416 / 180)) / 32.0
+            
+            if time2 < 0.5 {
+                time = time2
+            }
+            
+            currentAnswer = (Double(velocity) * cos(Double(grados) * 3.1416 / 180)) * time
+            break
         case "VEL_DIST_TIME":
             let grados = Int(arc4random_uniform(76) + 10)
             let velocity = Int(arc4random_uniform(71) + 10)
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(shot.finalTime()))
+            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: shot.xForTime(shot.finalTime())))
+            
+            currentAnswer = Double(velocity)
+            break
+        case "VEL_DIST_TIME_EN":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10) * 3
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            shot.setUnits("ENGLISH")
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "TIEMPO", with: String(shot.finalTime()))
@@ -93,6 +129,19 @@ class MainViewController: UIViewController {
             
             currentAnswer = Double(shot.xForTime(Double(time))!)
             break
+        case "POSX_TIME_EN":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10) * 3
+            let time = Int(arc4random_uniform(2) + 1)
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            shot.setUnits("ENGLISH")
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = Double(shot.xForTime(Double(time))!)
+            break
         case "POSY_TIME":
             let grados = Int(arc4random_uniform(76) + 10)
             let velocity = Int(arc4random_uniform(71) + 10)
@@ -105,11 +154,34 @@ class MainViewController: UIViewController {
             
             currentAnswer = Double(shot.yForTime(Double(time))!)
             break
+        case "POSY_TIME_EN":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10) * 3
+            let time = Int(arc4random_uniform(2) + 1)
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            shot.setUnits("ENGLISH")
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = Double(shot.yForTime(Double(time))!)
+            break
         case "MAX_HEIGHT_TIME":
             let grados = Int(arc4random_uniform(76) + 10)
             let velocity = Int(arc4random_uniform(71) + 10)
-            
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = shot.finalTime() / 2.0
+            break
+        case "MAX_HEIGHT_TIME_EN":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10) * 3
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            shot.setUnits("ENGLISH")
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
@@ -119,8 +191,18 @@ class MainViewController: UIViewController {
         case "DIST_GROUND_2":
             let grados = Int(arc4random_uniform(76) + 10)
             let velocity = Int(arc4random_uniform(71) + 10)
-            
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            
+            question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
+            question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            currentAnswer = shot.finalTime()
+            break
+        case "DIST_GROUND_2_EN":
+            let grados = Int(arc4random_uniform(76) + 10)
+            let velocity = Int(arc4random_uniform(71) + 10) * 3
+            let shot = Shot(Double(velocity), 0, 0, Double(grados))
+            shot.setUnits("ENGLISH")
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
@@ -169,9 +251,4 @@ class MainViewController: UIViewController {
     override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     }
-    
-
-    
-    
-
 }
