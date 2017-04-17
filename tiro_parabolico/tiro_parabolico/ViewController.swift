@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     var angle: Double!
     var valorPrevio:Double = 0.0
     var units: String!
+    var xLimit: String!
+    var yLimit: String!
+    var timeLimit: String!
+    var segundoFinal: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +55,16 @@ class ViewController: UIViewController {
             yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(0))
             distanceLabel.text = String(format: "%.2f f", shot.xForTime(0)!)
             heightLabel.text = String(format: "%.2f f", shot.yForTime(0)!)
+        }
+        
+        segundoFinal = ceil(shot.finalTime())
+        
+        if xLimit != "" && shot.xForTime(shot.finalTime())! < Double(xLimit)! {
+            segundoFinal = ceil(shot.timeForX(Double(xLimit)!))
+        }
+        
+        if timeLimit != "" && shot.finalTime() > Double(timeLimit)! {
+            segundoFinal = ceil(Double(timeLimit)!)
         }
         
         timeLabel.text = String(format: "%.2f s", 0)
@@ -117,7 +131,7 @@ class ViewController: UIViewController {
          el "ceil" es para darle margen a la grafica y que se pueda
          apreciar mejor
          */
-        let segundoFinal = ceil(shot.finalTime())
+        //let segundoFinal = ceil(shot.finalTime())
         
         /*
          Si el valor del stepper es menor o igual al ultimo segundo
@@ -193,6 +207,20 @@ class ViewController: UIViewController {
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(sender.value)!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(sender.value)!)
             }
+        }
+        
+        if timeLimit != "" && value > Double(timeLimit)! {
+            timeLabel.text = String(format: "%.2f s", Double(timeLimit)!)
+            if units == "IS" {
+                yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(Double(timeLimit)!))
+                distanceLabel.text = String(format: "%.2f m", shot.xForTime(Double(timeLimit)!)!)
+                heightLabel.text = String(format: "%.2f m", shot.yForTime(Double(timeLimit)!)!)
+            } else {
+                yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(Double(timeLimit)!))
+                distanceLabel.text = String(format: "%.2f f", shot.xForTime(Double(timeLimit)!)!)
+                heightLabel.text = String(format: "%.2f f", shot.yForTime(Double(timeLimit)!)!)
+            }
+            sender.value = segundoFinal
         }
     }
     

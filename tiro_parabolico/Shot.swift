@@ -132,4 +132,9 @@ class Shot: NSObject {
     public func setUnits(_ units: String) -> Void {
         self.units = units
     }
+    
+    public func timeForX(_ x: Double) -> Double{
+        // time is not used in getXVelocity so a zero is passed instead.
+        return (x - getInitialXPos()) / (getXVelocity(0))
+    }
 }

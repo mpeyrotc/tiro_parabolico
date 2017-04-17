@@ -18,6 +18,9 @@ class ParametrosViewController: UIViewController {
     @IBOutlet weak var valueYTextField: UITextField!
     @IBOutlet weak var valueTimeTextField: UITextField!
     @IBOutlet weak var sgUnits: UISegmentedControl!
+    @IBOutlet weak var xLimitTextField: UITextField!
+    @IBOutlet weak var yLimitTextField: UITextField!
+    @IBOutlet weak var timeLimitTextField: UITextField!
     
     var units = "IS"
     
@@ -59,6 +62,9 @@ class ParametrosViewController: UIViewController {
             animationView.startY = Double(startYPosTextField.text!)
             animationView.angle = Double(shotAngleTextField.text!)
             animationView.units = units
+            animationView.xLimit = xLimitTextField.text!
+            animationView.yLimit = yLimitTextField.text!
+            animationView.timeLimit = timeLimitTextField.text!
         }
         
     }

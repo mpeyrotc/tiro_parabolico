@@ -288,9 +288,12 @@
                         <outlet property="shotAngleTextField" destination="GVy-Mw-bbG" id="6RC-bb-t8m"/>
                         <outlet property="startXPosTextField" destination="6VF-0A-tOW" id="Uon-wG-mu0"/>
                         <outlet property="startYPosTextField" destination="0B2-92-665" id="wtN-uW-AQ6"/>
+                        <outlet property="timeLimitTextField" destination="luy-7I-cch" id="l0r-5A-cc0"/>
                         <outlet property="valueTimeTextField" destination="luy-7I-cch" id="mBh-jd-Bf7"/>
                         <outlet property="valueXTextField" destination="P7N-fM-shr" id="cqf-0f-rct"/>
                         <outlet property="valueYTextField" destination="sL9-H6-xmx" id="gTv-cb-jUu"/>
+                        <outlet property="xLimitTextField" destination="P7N-fM-shr" id="ltz-l5-LZz"/>
+                        <outlet property="yLimitTextField" destination="sL9-H6-xmx" id="GLe-zk-TQA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3z8-gA-STF" userLabel="First Responder" sceneMemberID="firstResponder"/>
