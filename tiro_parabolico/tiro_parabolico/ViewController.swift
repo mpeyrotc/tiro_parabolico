@@ -59,8 +59,9 @@ class ViewController: UIViewController {
         
         segundoFinal = ceil(shot.finalTime())
         
-        if xLimit != "" && shot.xForTime(shot.finalTime())! < Double(xLimit)! {
+        if xLimit != "" && shot.xForTime(shot.finalTime())! > Double(xLimit)! {
             segundoFinal = ceil(shot.timeForX(Double(xLimit)!))
+            timeLimit = String(shot.timeForX(Double(xLimit)!))
         }
         
         if timeLimit != "" && shot.finalTime() > Double(timeLimit)! {
