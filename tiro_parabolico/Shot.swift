@@ -66,18 +66,19 @@ class Shot: NSObject {
      */
     public func finalTime() -> Double {
         var result: Double!
+        let yVelocity = -(initialVelocity * sin(angle))
         
         if units == "IS" {
             result = ((initialVelocity * sin(angle)) / -GRAVITY) * 2
             
             if initialYPos > 0 {
-                result = result! + sqrt(initialYPos * 2 / -GRAVITY)
+                result = result! + (yVelocity * sqrt(pow(yVelocity, 2) - (2 * -initialYPos * -GRAVITY))) / -GRAVITY
             }
         } else {
             result = ((initialVelocity * sin(angle)) / -GRAVITY_EN) * 2
             
             if initialYPos > 0 {
-                result = result! + sqrt(initialYPos * 2 / -GRAVITY_EN)
+                result = result! + (yVelocity * sqrt(pow(yVelocity, 2) - (2 * -initialYPos * -GRAVITY_EN))) / -GRAVITY_EN
             }
         }
         
