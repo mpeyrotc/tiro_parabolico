@@ -69,8 +69,16 @@ class Shot: NSObject {
         
         if units == "IS" {
             result = ((initialVelocity * sin(angle)) / -GRAVITY) * 2
+            
+            if initialYPos > 0 {
+                result = result! + sqrt(initialYPos * 2 / GRAVITY)
+            }
         } else {
             result = ((initialVelocity * sin(angle)) / -GRAVITY_EN) * 2
+            
+            if initialYPos > 0 {
+                result = result! + sqrt(initialYPos * 2 / GRAVITY_EN)
+            }
         }
         
         return result
