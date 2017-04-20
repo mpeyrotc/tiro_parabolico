@@ -21,6 +21,7 @@ class ParametrosViewController: UIViewController {
     @IBOutlet weak var xLimitTextField: UITextField!
     @IBOutlet weak var yLimitTextField: UITextField!
     @IBOutlet weak var timeLimitTextField: UITextField!
+    @IBOutlet weak var btnGraficar: UIButton!
     
     var units = "IS"
     var graficasPrevias = [Shot]()
@@ -66,6 +67,7 @@ class ParametrosViewController: UIViewController {
             animationView.startY = Double(startYPosTextField.text!)
             animationView.angle = Double(shotAngleTextField.text!)
             animationView.units = units
+            // Limites
             animationView.xLimit = xLimitTextField.text!
             animationView.yLimit = yLimitTextField.text!
             animationView.timeLimit = timeLimitTextField.text!
@@ -75,6 +77,21 @@ class ParametrosViewController: UIViewController {
             animationView.alturaMayor = alturaMayor
         }
         
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        // Solo puede haber un limite con valor
+        if sender as! UIButton == btnGraficar {
+            if (xLimitTextField.text != "" && yLimitTextField.text != "" && timeLimitTextField.text != "") || (xLimitTextField.text != "" && yLimitTextField.text != "") || (xLimitTextField.text != "" && timeLimitTextField.text != "") || (yLimitTextField.text != "" && timeLimitTextField.text != "") {
+                
+                let alerta = UIAlertController(title: "Error", message: "Solo uno de los limites  puede tener valor", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            }
+        }
+        return true
     }
     
     // relacionado con boton Atras

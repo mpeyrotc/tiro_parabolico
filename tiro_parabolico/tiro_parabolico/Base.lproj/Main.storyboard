@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -74,7 +74,9 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-VE-KxQ">
                                 <rect key="frame" x="402" y="96" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Preguntas"/>
+                                <state key="normal" title="Preguntas">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="X40-jC-SuG" kind="presentation" id="kPc-Qa-Y2y"/>
                                 </connections>
@@ -82,7 +84,9 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3j-WY-rmY">
                                 <rect key="frame" x="386" y="145" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Configuración"/>
+                                <state key="normal" title="Configuración">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="1AH-et-HqB" kind="presentation" identifier="segueParametro" id="8Ii-2p-hce"/>
                                 </connections>
@@ -101,7 +105,9 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jig-Ir-3ki">
                                 <rect key="frame" x="399" y="194" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Acerca de"/>
+                                <state key="normal" title="Acerca de">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="LAA-Fl-ORH" kind="presentation" id="pGd-di-m6U"/>
                                 </connections>
@@ -292,6 +298,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnGraficar" destination="GRG-Jj-6Th" id="1gj-3r-HsA"/>
                         <outlet property="initialVelocityTextField" destination="bF2-PO-1yy" id="one-NP-eHa"/>
                         <outlet property="sgUnits" destination="oB0-ao-ykv" id="6Wo-Dn-rlR"/>
                         <outlet property="shotAngleTextField" destination="GVy-Mw-bbG" id="6RC-bb-t8m"/>
@@ -605,7 +612,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYZ-fJ-pVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1025" y="-108"/>
+            <point key="canvasLocation" x="-1025" y="186"/>
         </scene>
     </scenes>
     <resources>
