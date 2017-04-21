@@ -72,13 +72,13 @@ class Shot: NSObject {
             result = ((initialVelocity * sin(angle)) / -GRAVITY) * 2
             
             if initialYPos > 0 {
-                result = result! + (yVelocity * sqrt(pow(yVelocity, 2) - (2 * -initialYPos * -GRAVITY))) / -GRAVITY
+                result = result! + (yVelocity + sqrt(pow(yVelocity, 2) - (2 * -initialYPos * -GRAVITY))) / -GRAVITY
             }
         } else {
             result = ((initialVelocity * sin(angle)) / -GRAVITY_EN) * 2
             
             if initialYPos > 0 {
-                result = result! + (yVelocity * sqrt(pow(yVelocity, 2) - (2 * -initialYPos * -GRAVITY_EN))) / -GRAVITY_EN
+                result = result! + (yVelocity + sqrt(pow(yVelocity, 2) - (2 * -initialYPos * -GRAVITY_EN))) / -GRAVITY_EN
             }
         }
         

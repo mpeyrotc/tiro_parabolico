@@ -114,6 +114,9 @@ class ViewController: UIViewController {
         //Formato del eje izquiero
         lineChartView.leftAxis.axisMinimum = 0.0
         lineChartView.leftAxis.axisMaximum = shot.yForTime(shot.finalTime()/2)! + 1
+        if shot.getInitialYPos() > 0 {
+            lineChartView.leftAxis.axisMaximum += shot.getInitialYPos()
+        }
         
         //Formato del eje derecho
         lineChartView.rightAxis.enabled = false
