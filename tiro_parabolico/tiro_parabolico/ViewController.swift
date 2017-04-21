@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var yVelocityLabel: UILabel!
@@ -19,6 +20,10 @@ class ViewController: UIViewController {
     
     var yAxis = [Double]()
     var xAxis = [Double]()
+    var xAxisPrevia = [Double]()
+    var yAxisPrevia = [Double]()
+    var dataSet: [IChartDataSet] = []
+    var graficasPrevias = [Shot]()
     var index:Int = 1
     var shot: Shot!
     var initialVelocity: Double!
@@ -31,13 +36,31 @@ class ViewController: UIViewController {
     var yLimit: String!
     var timeLimit: String!
     var segundoFinal: Double!
+    var alturaMayor:Double!
+    var xMenor:Double!
+    var xMayor:Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        lineChartView.pinchZoomEnabled = true
+        
+        if graficasPrevias.count > 0 {
+            pintaPrevias()
+        }
+        
         // Generamos nuestro objeto "Shot" con los valores enviados
         shot = Shot(initialVelocity, startX, startY, angle)
         shot.setUnits(units)
+        
+        if xMenor == nil && xMayor == nil && alturaMayor == nil {
+            xMenor = shot.getInitialXPos() - 1
+            xMayor = shot.xForTime(shot.finalTime())! + 1
+            alturaMayor = pow((initialVelocity*sin((angle*3.14)/180)),2)/(2*9.81)+startY
+        }
+        
+        //Guardamos el nuevo disparo a las graficas previas.
+        graficasPrevias.append(shot)
         
         // Asignamos el primer punto en tiempo 0
         yAxis.append(shot.yForTime(0)!)
@@ -98,7 +121,7 @@ class ViewController: UIViewController {
         chartDataSet.drawValuesEnabled = false
         
         //Cargamos el estilo de la grafica al set de datos
-        var dataSet: [IChartDataSet] = []
+        //var dataSet: [IChartDataSet] = []
         dataSet.append(chartDataSet)
         
         //Creamos la grafica con el set de datos
@@ -113,17 +136,34 @@ class ViewController: UIViewController {
         
         //Formato del eje izquiero
         lineChartView.leftAxis.axisMinimum = 0.0
-        lineChartView.leftAxis.axisMaximum = shot.yForTime(shot.finalTime()/2)! + 1
-        if shot.getInitialYPos() > 0 {
-            lineChartView.leftAxis.axisMaximum += shot.getInitialYPos()
+        if alturaMayor < pow((initialVelocity*sin(angle*3.14/180)),2)/(2*9.81)+startY {
+            lineChartView.leftAxis.axisMaximum = pow((initialVelocity*sin(angle*3.14/180)),2)/(2*9.81)+startY
+            alturaMayor = pow((initialVelocity*sin(angle*3.14/180)),2)/(2*9.81)+startY
+        }
+        else{
+            lineChartView.leftAxis.axisMaximum = alturaMayor
         }
         
         //Formato del eje derecho
         lineChartView.rightAxis.enabled = false
         
         //Formato del eje inferior
-        lineChartView.xAxis.axisMinimum = shot.getInitialXPos()
-        lineChartView.xAxis.axisMaximum = shot.xForTime(shot.finalTime())!
+        if xMenor > shot.getInitialXPos() - 1 {
+            lineChartView.xAxis.axisMinimum = shot.getInitialXPos() - 1
+            xMenor = shot.getInitialXPos() - 1
+        }
+        else {
+            lineChartView.xAxis.axisMinimum = xMenor
+        }
+        if xMayor < shot.xForTime(shot.finalTime())! + 1 {
+            lineChartView.xAxis.axisMaximum = shot.xForTime(shot.finalTime())! + 1
+            xMayor = shot.xForTime(shot.finalTime())! + 1
+        }
+        else{
+            lineChartView.xAxis.axisMaximum = xMayor
+        }
+        
+        creatChart(data: dataSet)
     }
     
     @IBAction func update(_ sender: UIStepper) {
@@ -159,6 +199,7 @@ class ViewController: UIViewController {
                 
                 //Actualizamos el valor previo
                 valorPrevio = value
+                dataSet.removeLast()
                 
             } else if value < valorPrevio {
                 
@@ -227,5 +268,141 @@ class ViewController: UIViewController {
             sender.value = segundoFinal
         }
     }
+    
+    func pintaPrevias() {
+        for i in graficasPrevias {
+            /*
+             Valor del ultimo segundo posible antes de tocar 0 en altura
+             el "ceil" es para darle margen a la grafica y que se pueda
+             apreciar mejor
+             */
+            //let segundoFinal = ceil(shot.finalTime())
+            
+            /*
+             Si el valor del stepper es menor o igual al ultimo segundo
+             podemos pintar mas puntos
+             */
+            
+            var value = 1.0
+            let segFinal = ceil(i.finalTime())
+            var valPrevio = 0.0
+            
+            while value <= segFinal {
+                
+                /*
+                 Si el valor del stepper incremento pintamos el siguiente segundo
+                 */
+                if value > valPrevio {
+                    
+                    /*
+                     Este ciclo sirve para pintar 10 puntos entre el segundo
+                     "x" y el segundo "y" inclusivos
+                     */
+                    for index in stride(from: valPrevio, to: value, by: 0.1){
+                        yAxisPrevia.append(i.yForTime(Double(index))!)
+                        xAxisPrevia.append(i.xForTime(Double(index))!)
+                    }
+                    
+                    //Actualizamos el valor previo
+                    valPrevio = value
+                    
+                } else if value < valPrevio {
+                    
+                    /*
+                     Este ciclo es para eliminar los ultimos 10 puntos pintados
+                     */
+                    for _ in 1...10 {
+                        yAxisPrevia.removeLast()
+                        xAxisPrevia.removeLast()
+                    }
+                    
+                    //Actualizamos el valor previo
+                    valPrevio = value
+                }
+                
+                value += 1
+            }
+            updatePast(newShot: i)
+            yAxisPrevia.removeAll()
+            xAxisPrevia.removeAll()
+        }
+    }
+    
+    func updatePast(newShot: Shot) {
+        var dataInput: [ChartDataEntry] = []
+        
+        // Introducimos los puntos
+        for i in 0..<yAxisPrevia.count {
+            let dataEntry = ChartDataEntry(x: xAxisPrevia[i], y: yAxisPrevia[i])
+            dataInput.append(dataEntry)
+        }
+        
+        // Establecemos el estilo de nuestra grafica
+        let chartDataSet = LineChartDataSet(values: dataInput, label: "Altura")
+        chartDataSet.circleRadius = 2
+        
+        /*
+            Colores aleatoreos
+        */
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        //–––––––––––––––––––––––––––––––––––
+        chartDataSet.circleColors = [NSUIColor.init(red: red, green: green, blue: blue, alpha: 1)]
+        chartDataSet.lineWidth = 5
+        chartDataSet.colors = [NSUIColor.init(red: red, green: green, blue: blue, alpha: 1)]
+        //––––––––––––––OPCIONAL LINEA PUNTEADA
+        //chartDataSet.colors = [NSUIColor.clear]
+        chartDataSet.drawValuesEnabled = false
+        
+        //Cargamos el estilo de la grafica al set de datos
+        
+        dataSet.append(chartDataSet)
+        
+        //Creamos la grafica con el set de datos
+        let chartData = LineChartData(dataSets: dataSet)
+        
+        //Se la asignamos al view para que muetre la grafica.
+        lineChartView.data = chartData
+        lineChartView.chartDescription!.text = ""
+        
+        
+        //Formato de la grafica.
+        
+        //pow((initialVelocity*sin(angle)),2)/(2*9.81)+startY
+        //Formato del eje izquiero
+        if alturaMayor < pow(newShot.getVelocity()*sin(newShot.getAngle()*3.14/180),2)/(2*9.81)+newShot.getInitialYPos() {
+            lineChartView.leftAxis.axisMaximum = pow(newShot.getVelocity()*sin(newShot.getAngle()*3.14/180),2)/(2*9.81)+newShot.getInitialYPos()
+            alturaMayor = pow(newShot.getVelocity()*sin(newShot.getAngle()*3.14/180),2)/(2*9.81)+newShot.getInitialYPos()
+        }
+        
+        //Formato del eje derecho
+        lineChartView.rightAxis.enabled = false
+        
+        //Formato del eje inferior
+        if xMenor > newShot.getInitialXPos() - 1 {
+            lineChartView.xAxis.axisMinimum = newShot.getInitialXPos() - 1
+            xMenor = newShot.getInitialXPos() - 1
+        }
+        if xMayor < newShot.xForTime(newShot.finalTime())! + 1 {
+            lineChartView.xAxis.axisMaximum = newShot.xForTime(newShot.finalTime())! + 1
+            xMayor = newShot.xForTime(newShot.finalTime())! + 1
+        }
+
+    }
+
+    func creatChart(data: [IChartDataSet]){
+        let chartData = LineChartData(dataSets: data)
+        lineChartView.data = chartData
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let VistaInicio = segue.destination as! ParametrosViewController
+        VistaInicio.graficasPrevias = graficasPrevias
+        VistaInicio.xMenor = xMenor
+        VistaInicio.xMayor = xMayor
+        VistaInicio.alturaMayor = alturaMayor
+    }
+    
     
 }

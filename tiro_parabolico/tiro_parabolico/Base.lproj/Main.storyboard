@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,14 @@
                                 <rect key="frame" x="20" y="49" width="528" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Tiro parabólico ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Enero Mayo de 2017, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.Desarrolladores:Marco A. PeyrotDaniel GonzálezJosé Luis CarvajalTiro parabólico se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
+                                <string key="text">Tiro parabólico ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Enero Mayo de 2017, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.
+
+Desarrolladores:
+Marco A. Peyrot
+Daniel González
+José Luis Carvajal
+
+Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

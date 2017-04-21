@@ -23,6 +23,10 @@ class ParametrosViewController: UIViewController {
     @IBOutlet weak var timeLimitTextField: UITextField!
     
     var units = "IS"
+    var graficasPrevias = [Shot]()
+    var xMenor:Double!
+    var xMayor:Double!
+    var alturaMayor:Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +69,10 @@ class ParametrosViewController: UIViewController {
             animationView.xLimit = xLimitTextField.text!
             animationView.yLimit = yLimitTextField.text!
             animationView.timeLimit = timeLimitTextField.text!
+            animationView.graficasPrevias = graficasPrevias
+            animationView.xMayor = xMayor
+            animationView.xMenor = xMenor
+            animationView.alturaMayor = alturaMayor
         }
         
     }
@@ -95,5 +103,9 @@ class ParametrosViewController: UIViewController {
         default:
             break;
         }
+    }
+    
+    func actualizaPrevio(valores: [Shot]){
+        graficasPrevias = valores
     }
 }
