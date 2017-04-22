@@ -169,6 +169,7 @@ class ViewController: UIViewController {
     @IBAction func update(_ sender: UIStepper) {
         // Valor del stepper
         let value = sender.value
+        dataSet.removeLast()
         
         /*
          Valor del ultimo segundo posible antes de tocar 0 en altura
@@ -199,7 +200,6 @@ class ViewController: UIViewController {
                 
                 //Actualizamos el valor previo
                 valorPrevio = value
-                dataSet.removeLast()
                 
             } else if value < valorPrevio {
                 
@@ -210,7 +210,6 @@ class ViewController: UIViewController {
                     yAxis.removeLast()
                     xAxis.removeLast()
                 }
-                
                 //Actualizamos el valor previo
                 valorPrevio = value
             }
