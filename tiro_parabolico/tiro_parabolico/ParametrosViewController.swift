@@ -111,7 +111,6 @@ class ParametrosViewController: UIViewController {
         graficasPrevias = valores
     }
     
-    
     /*
      Funcion para reiniciar el arreglo de las graficas que habian sido previamente
     pintadas, con la opcion de cancelar la accion si el usuario no desea continuar
@@ -144,4 +143,9 @@ class ParametrosViewController: UIViewController {
         }
     }
     
+    // MARK: - Keyboard methods
+    
+    @IBAction func removeKeyboard() {
+        view.endEditing(true)
+    }
 }
