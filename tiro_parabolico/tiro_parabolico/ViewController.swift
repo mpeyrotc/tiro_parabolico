@@ -390,11 +390,13 @@ class ViewController: UIViewController {
 
     }
 
+    //Se crea la grafica con los valores de todas las graficas guardadas y la nueva
     func creatChart(data: [IChartDataSet]){
         let chartData = LineChartData(dataSets: data)
         lineChartView.data = chartData
     }
     
+    //Se le manda al parametrosViewController los valores actuales
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let VistaInicio = segue.destination as! ParametrosViewController
         VistaInicio.graficasPrevias = graficasPrevias
