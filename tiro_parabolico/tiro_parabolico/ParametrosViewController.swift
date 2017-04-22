@@ -108,4 +108,10 @@ class ParametrosViewController: UIViewController {
     func actualizaPrevio(valores: [Shot]){
         graficasPrevias = valores
     }
+    
+    // MARK: - Keyboard methods
+    
+    @IBAction func removeKeyboard() {
+        view.endEditing(true)
+    }
 }

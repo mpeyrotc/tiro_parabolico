@@ -251,4 +251,9 @@ class MainViewController: UIViewController {
     override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     }
+    
+    // MARK: - Keyboard methods
+    @IBAction func removeKeyboard() {
+        view.endEditing(true)
+    }
 }
