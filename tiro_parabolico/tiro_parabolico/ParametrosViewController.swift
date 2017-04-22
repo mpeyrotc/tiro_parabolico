@@ -83,6 +83,7 @@ class ParametrosViewController: UIViewController {
         
         // Solo puede haber un limite con valor
         if sender as! UIButton == btnGraficar {
+            // checar que haya datos en los parametros y solo un limite
             if (xLimitTextField.text != "" && yLimitTextField.text != "" && timeLimitTextField.text != "") || (xLimitTextField.text != "" && yLimitTextField.text != "") || (xLimitTextField.text != "" && timeLimitTextField.text != "") || (yLimitTextField.text != "" && timeLimitTextField.text != "") {
                 
                 let alerta = UIAlertController(title: "Error", message: "Solo uno de los limites  puede tener valor", preferredStyle: .alert)
@@ -90,6 +91,64 @@ class ParametrosViewController: UIViewController {
                 present(alerta, animated: true, completion: nil)
                 return false
             }
+            
+            // Checar que solo se trate de valores numericos
+            if Double(startXPosTextField.text!) == nil {
+                let alerta = UIAlertController(title: "Error", message: "La posición inicial en X tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            } else if Double(startYPosTextField.text!) == nil {
+                let alerta = UIAlertController(title: "Error", message: "La posición inicial en Y tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            } else if Double(initialVelocityTextField.text!) == nil {
+                let alerta = UIAlertController(title: "Error", message: "La velocidad inicial tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            } else if Double(shotAngleTextField.text!) == nil {
+                let alerta = UIAlertController(title: "Error", message: "El ángulo inicial tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            } else if xLimitTextField.text != "" && Double(xLimitTextField.text!) == nil {
+                let alerta = UIAlertController(title: "Error", message: "El límite en distancia X tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            } else if timeLimitTextField.text != "" && Double(timeLimitTextField.text!) == nil {
+                let alerta = UIAlertController(title: "Error", message: "El límite en tiempo tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            }
+            
+            // Checar que solo se trate de valores positivos
+            if Double(startXPosTextField.text!)! < 0 ||
+                    Double(startYPosTextField.text!)! < 0 ||
+                    Double(initialVelocityTextField.text!)! < 0 ||
+                    Double(shotAngleTextField.text!)! < 0 ||
+                    (timeLimitTextField.text != "" && Double(timeLimitTextField.text!)! < 0) ||
+                    (xLimitTextField.text != "" && Double(xLimitTextField.text!)! < 0) {
+                
+                let alerta = UIAlertController(title: "Error", message: "Todos los campos deben tener valores positivos.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            }
+            
+            // Checar que el angulo de tiro se encuentre en el ángulo
+            // apropiado
+            if Double(shotAngleTextField.text!)! >= 90 && Double(shotAngleTextField.text!)! <= 270 {
+                let alerta = UIAlertController(title: "Error", message: "El ángulo de tiro solo puede ser de 0 a 90 grados y de 270 a 360 grados.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+
+            }
+            
         }
         return true
     }
