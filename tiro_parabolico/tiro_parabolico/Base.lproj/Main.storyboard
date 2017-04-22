@@ -281,6 +281,11 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 <action selector="regresar:" destination="qmj-Mk-lvw" id="Ea2-y4-7Az"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Borra Graficas" id="bcq-Us-B8s">
+                            <connections>
+                                <action selector="borraGraficas:" destination="qmj-Mk-lvw" id="FJv-3p-wLB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="initialVelocityTextField" destination="bF2-PO-1yy" id="one-NP-eHa"/>

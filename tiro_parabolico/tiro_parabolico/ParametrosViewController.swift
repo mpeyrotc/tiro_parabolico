@@ -105,7 +105,43 @@ class ParametrosViewController: UIViewController {
         }
     }
     
+    
+    //Funcion para actualizar el arreglo de graficas.
     func actualizaPrevio(valores: [Shot]){
         graficasPrevias = valores
     }
+    
+    
+    /*
+     Funcion para reiniciar el arreglo de las graficas que habian sido previamente
+    pintadas, con la opcion de cancelar la accion si el usuario no desea continuar
+     con la decision de borrar las graficas.
+    */
+    @IBAction func borraGraficas(_ sender: UIBarButtonItem) {
+        if sender.tag == 1{
+            /*
+             var refreshAlert = UIAlertController(title: "Refresh", message: "All data will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
+             
+             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+             print("Handle Ok logic here")
+             }))
+             
+             refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+             print("Handle Cancel Logic here")
+             }))
+             
+             presentViewController(refreshAlert, animated: true, completion: nil)
+            */
+            let alertaBorrar = UIAlertController(title: "Reinicia", message: "Se borraran las graficas previamente utilizadas", preferredStyle: UIAlertControllerStyle.alert)
+            alertaBorrar.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {(action: UIAlertAction!) in
+            self.graficasPrevias.removeAll()
+            self.xMenor = nil
+            self.xMayor = nil
+            self.alturaMayor = nil
+            }))
+            alertaBorrar.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+            present(alertaBorrar, animated: true, completion: nil)
+        }
+    }
+    
 }
