@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var questionTextArea: UITextView!
     @IBOutlet weak var feedbackLabel: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
    
     var questions: NSArray!
     var currentQuestion = -1
@@ -44,6 +45,8 @@ class MainViewController: UIViewController {
         // Create new question
         var question:String = dict.value(forKey: "Pregunta") as! String
         let subtype = dict.value(forKey: "SUBTYPE") as! String
+        
+        submitButton.isEnabled = true
         
         switch subtype {
         case "DIST_GROUND":
@@ -225,16 +228,22 @@ class MainViewController: UIViewController {
         let type = dict.value(forKey: "TYPE") as! String
         var isCorrect:Bool = false
         
-        if type == "DYNAMIC" {
-            isCorrect = (abs(Double(answerTextField.text!)! - currentAnswer) < 0.1)
+        if Double(answerTextField.text!) == nil {
+            let alerta = UIAlertController(title: "Valor inválido", message: "La respuesta tiene un formato no numérico o inválido. Corrígalo y vuelva a intentarlo.", preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alerta, animated: true, completion: nil)
         } else {
-            isCorrect = (answerTextField.text == (dict.value(forKey: "Respuesta") as! String))
-        }
-        
-        if isCorrect {
-            feedbackLabel.text = "Correcto!"
-        } else {
-            feedbackLabel.text = "Inténtelo otra vez."
+            if type == "DYNAMIC" {
+                isCorrect = (abs(Double(answerTextField.text!)! - currentAnswer) < 0.1)
+            } else {
+                isCorrect = (answerTextField.text == (dict.value(forKey: "Respuesta") as! String))
+            }
+            
+            if isCorrect {
+                feedbackLabel.text = "Correcto!"
+            } else {
+                feedbackLabel.text = "Inténtelo otra vez."
+            }
         }
     }
     
