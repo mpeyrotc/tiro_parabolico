@@ -102,9 +102,14 @@ class MainViewController: UIViewController {
             let velocity = Int(arc4random_uniform(71) + 10)
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
             
+            let distancia = shot.xForTime(shot.finalTime())!
+            let distanciaS = String(format: "%.4f", distancia)
+            let tiempo = shot.finalTime()
+            let tiempoS = String(format: "%.2f", tiempo)
+            
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
-            question = question.replacingOccurrences(of: "TIEMPO", with: String(shot.finalTime()))
-            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: shot.xForTime(shot.finalTime())))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(describing: tiempoS))
+            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: distanciaS))
             
             currentAnswer = Double(velocity)
             break
@@ -114,9 +119,14 @@ class MainViewController: UIViewController {
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
             shot.setUnits("ENGLISH")
             
+            let distancia = shot.xForTime(shot.finalTime())!
+            let distanciaS = String(format: "%.4f", distancia)
+            let tiempo = shot.finalTime()
+            let tiempoS = String(format: "%.2f", tiempo)
+
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
-            question = question.replacingOccurrences(of: "TIEMPO", with: String(shot.finalTime()))
-            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: shot.xForTime(shot.finalTime())))
+            question = question.replacingOccurrences(of: "TIEMPO", with: String(describing: tiempoS))
+            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: distanciaS))
             
             currentAnswer = Double(velocity)
             break
