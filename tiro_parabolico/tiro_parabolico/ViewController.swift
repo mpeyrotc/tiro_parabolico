@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         chartDataSet.circleRadius = 2
         chartDataSet.circleColors = [NSUIColor.black]
         chartDataSet.lineWidth = 5
-        chartDataSet.colors = [NSUIColor.black]
+        chartDataSet.colors = [NSUIColor.init(white: 0, alpha: 0.5)]
         //––––––––––––––OPCIONAL LINEA PUNTEADA
         //chartDataSet.colors = [NSUIColor.clear]
         chartDataSet.drawValuesEnabled = false
