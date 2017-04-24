@@ -20,6 +20,7 @@
 		4D6200371E79B0AA00339DD7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; };
 		4D6200381E79B0AA00339DD7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61BC8D5B1EAE542300BCABFC /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8D5A1EAE542300BCABFC /* Gradiente.swift */; };
+		61BC8D611EAEAAA600BCABFC /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8D601EAEAAA600BCABFC /* ButtonGradient.swift */; };
 		61E6467F1E8B1CE900587BE9 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */; };
 		61E646841E8B33E800587BE9 /* ParametrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E646831E8B33E800587BE9 /* ParametrosViewController.swift */; };
 		61E821B21E79022900220894 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E821B11E79022900220894 /* Property List.plist */; };
@@ -104,6 +105,7 @@
 		4D6200291E79B05D00339DD7 /* ChartsAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ChartsAPI; path = ../ChartsAPI; sourceTree = "<group>"; };
 		4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../ChartsAPI/Charts.xcodeproj; sourceTree = "<group>"; };
 		61BC8D5A1EAE542300BCABFC /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradiente.swift; sourceTree = "<group>"; };
+		61BC8D601EAEAAA600BCABFC /* ButtonGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonGradient.swift; sourceTree = "<group>"; };
 		61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		61E646831E8B33E800587BE9 /* ParametrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametrosViewController.swift; sourceTree = "<group>"; };
 		61E821B11E79022900220894 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				2877A9611E74C443006C0C30 /* AppDelegate.swift */,
 				2877A9631E74C443006C0C30 /* ViewController.swift */,
 				2877A9651E74C443006C0C30 /* Main.storyboard */,
+				61BC8D601EAEAAA600BCABFC /* ButtonGradient.swift */,
 				61F468201E8C3CB40052B829 /* AcercaViewController.swift */,
 				61E646831E8B33E800587BE9 /* ParametrosViewController.swift */,
 				61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */,
@@ -380,6 +383,7 @@
 				2877A9641E74C443006C0C30 /* ViewController.swift in Sources */,
 				2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */,
 				61F468211E8C3CB40052B829 /* AcercaViewController.swift in Sources */,
+				61BC8D611EAEAAA600BCABFC /* ButtonGradient.swift in Sources */,
 				61BC8D5B1EAE542300BCABFC /* Gradiente.swift in Sources */,
 				61E6467F1E8B1CE900587BE9 /* InicioViewController.swift in Sources */,
 				286795581E7A42A900C1C2FD /* MainViewController.swift in Sources */,
