@@ -37,7 +37,7 @@ class Shot: NSObject {
         if time < 0 {
             return nil
         }
-        return initialXPos + (getXVelocity(time) * time)
+        return initialXPos + abs(getXVelocity(time) * time)
     }
     
     /*

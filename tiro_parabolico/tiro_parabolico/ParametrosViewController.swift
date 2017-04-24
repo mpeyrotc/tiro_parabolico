@@ -137,8 +137,7 @@ class ParametrosViewController: UIViewController {
             }
             
             // Checar que solo se trate de valores positivos
-            if Double(startXPosTextField.text!)! < 0 ||
-                    Double(startYPosTextField.text!)! < 0 ||
+            if Double(startYPosTextField.text!)! < 0 ||
                     Double(initialVelocityTextField.text!)! < 0 ||
                     Double(shotAngleTextField.text!)! < 0 ||
                     (timeLimitTextField.text != "" && Double(timeLimitTextField.text!)! < 0) ||
@@ -150,15 +149,17 @@ class ParametrosViewController: UIViewController {
                 return false
             }
             
+            
             // Checar que el angulo de tiro se encuentre en el ángulo
             // apropiado
-            if Double(shotAngleTextField.text!)! >= 90 && Double(shotAngleTextField.text!)! <= 270 {
+            if Double(shotAngleTextField.text!)! > 90 && Double(shotAngleTextField.text!)! < 270 {
                 let alerta = UIAlertController(title: "Error", message: "El ángulo de tiro solo puede ser de 0 a 90 grados y de 270 a 360 grados.", preferredStyle: .alert)
                 alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
                 present(alerta, animated: true, completion: nil)
                 return false
 
             }
+            
             
         }
         return true
