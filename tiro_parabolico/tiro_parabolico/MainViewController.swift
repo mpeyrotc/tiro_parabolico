@@ -28,6 +28,9 @@ class MainViewController: UIViewController {
         
         let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
         questions = NSArray(contentsOfFile: path!)
+        
+        // Fondo transparente para el background de la pregunta
+        questionTextArea.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
     }
 
     override func didReceiveMemoryWarning() {
