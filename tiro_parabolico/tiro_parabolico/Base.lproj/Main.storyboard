@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,7 +47,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="btnAtras" destination="GFR-fz-Y9T" id="Qtb-aY-13d"/>
@@ -72,16 +72,16 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="GYa-N0-38H">
-                                <rect key="frame" x="84" y="87" width="400" height="147"/>
+                                <rect key="frame" x="84" y="105.5" width="400" height="110"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuImagen" translatesAutoresizingMaskIntoConstraints="NO" id="sov-e0-W7s">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="147"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="110"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-47-QOc">
-                                        <rect key="frame" x="325" y="0.0" width="75" height="147"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-47-QOc">
+                                        <rect key="frame" x="325" y="0.0" width="75" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-VE-KxQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="49"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                                 <state key="normal" title="Preguntas">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -90,7 +90,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3j-WY-rmY">
-                                                <rect key="frame" x="0.0" y="49" width="75" height="49"/>
+                                                <rect key="frame" x="0.0" y="40" width="75" height="30"/>
                                                 <state key="normal" title="Simulación">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -99,7 +99,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jig-Ir-3ki">
-                                                <rect key="frame" x="0.0" y="98" width="75" height="49"/>
+                                                <rect key="frame" x="0.0" y="80" width="75" height="30"/>
                                                 <state key="normal" title="Acerca de">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -119,7 +119,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kSC-tC-Hsk" firstAttribute="centerX" secondItem="a9E-C0-zRR" secondAttribute="centerX" id="NEV-fr-C7G"/>
                             <constraint firstItem="kSC-tC-Hsk" firstAttribute="top" secondItem="Wo3-yV-QAf" secondAttribute="bottom" constant="20" id="UOD-Kd-duY"/>
@@ -127,6 +127,11 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                             <constraint firstItem="GYa-N0-38H" firstAttribute="centerX" secondItem="a9E-C0-zRR" secondAttribute="centerX" id="z9q-8M-f7e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnAcerca" destination="jig-Ir-3ki" id="8Lf-a0-vkI"/>
+                        <outlet property="btnPreguntas" destination="Wmi-VE-KxQ" id="iiT-Yb-hdM"/>
+                        <outlet property="btnSimulacion" destination="L3j-WY-rmY" id="TUx-P1-KJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulg-FI-aMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,7 +296,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Whw-qh-QiZ" appends="YES" id="dzP-OY-eE7"/>
@@ -358,7 +363,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM3-Qq-Xcv">
                                 <rect key="frame" x="30" y="104" width="528" height="143"/>
-                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zM3-Qq-Xcv" secondAttribute="height" multiplier="521:141" id="e43-2g-fK4"/>
                                 </constraints>
@@ -412,7 +417,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1bj-hc-IeE" firstAttribute="leading" secondItem="1Ox-r2-EIb" secondAttribute="leading" id="0Rh-fL-Oz4"/>
@@ -570,7 +575,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9zp-R8-1Ey" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lm9-hg-Wqr"/>
                             <constraint firstItem="9zp-R8-1Ey" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yzc-EN-drh"/>
