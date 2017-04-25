@@ -14,7 +14,6 @@ class InicioViewController: UIViewController {
     @IBOutlet weak var btnSimulacion: UIButton!
     @IBOutlet weak var btnAcerca: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
