@@ -24,6 +24,7 @@ class ParametrosViewController: UIViewController {
     @IBOutlet weak var btnGraficar: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewVistaEnScroll: UIView!
+    @IBOutlet weak var sgcUnits: UISegmentedControl!
     
     var activeField: UITextField?
     
@@ -42,7 +43,9 @@ class ParametrosViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ParametrosViewController.removeKeyboard))
         
         viewVistaEnScroll.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        self.view.addGestureRecognizer(tap)
+        sgcUnits.tintColor = UIColor(red: 0.71, green: 0.0039, blue: 0, alpha: 1)
+    
+            self.view.addGestureRecognizer(tap)
         
         self.registrarseParaNotificacionesDeTeclado()
     }

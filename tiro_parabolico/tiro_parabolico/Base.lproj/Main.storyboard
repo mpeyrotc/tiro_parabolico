@@ -96,13 +96,13 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="GYa-N0-38H">
-                                        <rect key="frame" x="84" y="105" width="400" height="110"/>
+                                        <rect key="frame" x="34.5" y="105" width="499" height="110"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuImagen" translatesAutoresizingMaskIntoConstraints="NO" id="sov-e0-W7s">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="110"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disparoMenu" translatesAutoresizingMaskIntoConstraints="NO" id="sov-e0-W7s">
+                                                <rect key="frame" x="0.0" y="0.0" width="399" height="110"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-47-QOc">
-                                                <rect key="frame" x="325" y="0.0" width="75" height="110"/>
+                                                <rect key="frame" x="424" y="0.0" width="75" height="110"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmi-VE-KxQ" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
@@ -170,7 +170,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplicación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSC-tC-Hsk">
-                                        <rect key="frame" x="245" y="32" width="79" height="21"/>
+                                        <rect key="frame" x="245" y="32" width="79" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -238,7 +238,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parámetros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-GT-1yX">
                                                 <rect key="frame" x="119" y="15" width="94" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -311,9 +311,9 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Límites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3H-gp-4ab">
-                                                <rect key="frame" x="399" y="15" width="56" height="21"/>
+                                                <rect key="frame" x="399" y="15" width="58" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -488,6 +488,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <outlet property="initialVelocityTextField" destination="bF2-PO-1yy" id="one-NP-eHa"/>
                         <outlet property="scrollView" destination="rFF-9x-IZg" id="ieX-ZT-B2M"/>
                         <outlet property="sgUnits" destination="oB0-ao-ykv" id="6Wo-Dn-rlR"/>
+                        <outlet property="sgcUnits" destination="oB0-ao-ykv" id="MO4-sR-EUE"/>
                         <outlet property="shotAngleTextField" destination="GVy-Mw-bbG" id="6RC-bb-t8m"/>
                         <outlet property="startXPosTextField" destination="6VF-0A-tOW" id="Uon-wG-mu0"/>
                         <outlet property="startYPosTextField" destination="0B2-92-665" id="wtN-uW-AQ6"/>
@@ -833,6 +834,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <outlet property="distanceLabel" destination="6Oy-Pw-3Tg" id="xxA-pn-Cd0"/>
                         <outlet property="heightLabel" destination="MTY-Nr-cX1" id="xrJ-2a-d1t"/>
                         <outlet property="lineChartView" destination="zaE-df-63k" id="GA6-eA-Con"/>
+                        <outlet property="stepperGrafica" destination="pXQ-Ft-b35" id="W5v-2Y-2Hk"/>
                         <outlet property="timeLabel" destination="u09-i7-B7c" id="VEb-cr-8sr"/>
                         <outlet property="yVelocityLabel" destination="Gfj-k1-a8g" id="EUO-ev-VYZ"/>
                     </connections>
@@ -880,7 +882,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
         </scene>
     </scenes>
     <resources>
-        <image name="menuImagen" width="300" height="147"/>
+        <image name="disparoMenu" width="399" height="141"/>
         <image name="tituloInicio" width="512" height="97"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var stepperGrafica: UIStepper!
     
     var yAxis = [Double]()
     var xAxis = [Double]()
@@ -39,11 +40,15 @@ class ViewController: UIViewController {
     var alturaMayor:Double!
     var xMenor:Double!
     var xMayor:Double!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lineChartView.pinchZoomEnabled = true
+        
+        stepperGrafica.tintColor = UIColor(red: 0.71, green: 0.0039, blue: 0, alpha: 1)
+
         
         if graficasPrevias.count > 0 {
             pintaPrevias()
