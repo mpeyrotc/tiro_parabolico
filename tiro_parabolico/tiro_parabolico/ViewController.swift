@@ -12,6 +12,7 @@ import Charts
 
 class ViewController: UIViewController {
     
+    //MARK: - Variables
     @IBOutlet weak var yVelocityLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
@@ -34,22 +35,22 @@ class ViewController: UIViewController {
     var valorPrevio:Double = 0.0
     var units: String!
     var xLimit: String!
-    var yLimit: String!
     var timeLimit: String!
     var segundoFinal: Double!
     var alturaMayor:Double!
     var xMenor:Double!
     var xMayor:Double!
 
+    //MARK: - Arranque
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Establecimiento default de grafica y color del stepper
         lineChartView.pinchZoomEnabled = true
-        
         stepperGrafica.tintColor = UIColor(red: 0.71, green: 0.0039, blue: 0, alpha: 1)
-
         
+        //Pintamos la graficas que estan guardadas.
         if graficasPrevias.count > 0 {
             pintaPrevias()
         }
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
         shot = Shot(initialVelocity, startX, startY, angle)
         shot.setUnits(units)
         
+        //Valores para los limites de la grafcia
         if xMenor == nil && xMayor == nil && alturaMayor == nil {
             xMenor = shot.getInitialXPos() - 1
             xMayor = shot.xForTime(shot.finalTime())! + 1
@@ -85,8 +87,8 @@ class ViewController: UIViewController {
             heightLabel.text = String(format: "%.2f f", shot.yForTime(0)!)
         }
         
+        //Tiempo final del disparo; si hay algun limite saca el tiempo final en base al limite
         segundoFinal = ceil(shot.finalTime())
-        
         if xLimit != "" && shot.xForTime(shot.finalTime())! > Double(xLimit)! {
             segundoFinal = ceil(shot.timeForX(Double(xLimit)!))
             timeLimit = String(shot.timeForX(Double(xLimit)!))
@@ -105,6 +107,7 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: - Graficas
     func setChart(){
         
         var dataInput: [ChartDataEntry] = []
@@ -121,8 +124,6 @@ class ViewController: UIViewController {
         chartDataSet.circleColors = [NSUIColor.black]
         chartDataSet.lineWidth = 5
         chartDataSet.colors = [NSUIColor.init(white: 0, alpha: 0.5)]
-        //––––––––––––––OPCIONAL LINEA PUNTEADA
-        //chartDataSet.colors = [NSUIColor.clear]
         chartDataSet.drawValuesEnabled = false
         
         //Cargamos el estilo de la grafica al set de datos
@@ -168,6 +169,7 @@ class ViewController: UIViewController {
             lineChartView.xAxis.axisMaximum = xMayor
         }
         
+        //Creamos la grafica con todas las graficas
         creatChart(data: dataSet)
     }
     
@@ -180,10 +182,7 @@ class ViewController: UIViewController {
          Valor del ultimo segundo posible antes de tocar 0 en altura
          el "ceil" es para darle margen a la grafica y que se pueda
          apreciar mejor
-         */
-        //let segundoFinal = ceil(shot.finalTime())
-        
-        /*
+         
          Si el valor del stepper es menor o igual al ultimo segundo
          podemos pintar mas puntos
          */
@@ -273,6 +272,10 @@ class ViewController: UIViewController {
         }
     }
     
+    /*
+     Funcion que sirve para guardas los valores de las graficas que fueron guardas
+     el funcionamiento es similar al de la funcion update()
+    */
     func pintaPrevias() {
         for i in graficasPrevias {
             /*
@@ -332,6 +335,11 @@ class ViewController: UIViewController {
         }
     }
     
+    /*
+     Funcion auxiliaria a pintaPrevia() para almacenar todas las graficas en el
+     mismo set antes de pintar en el canvas
+    */
+    
     func updatePast(newShot: Shot) {
         var dataInput: [ChartDataEntry] = []
         
@@ -348,19 +356,21 @@ class ViewController: UIViewController {
         /*
             Colores aleatoreos
         */
-        let red:CGFloat = CGFloat(drand48())
-        let green:CGFloat = CGFloat(drand48())
-        let blue:CGFloat = CGFloat(drand48())
+        var red:CGFloat = CGFloat(drand48())
+        var green:CGFloat = CGFloat(drand48())
+        var blue:CGFloat = CGFloat(drand48())
+        while((red >= 215 && red <= 222) && green > 234 && (blue >= 215 && blue <= 224)){
+            red = CGFloat(drand48())
+            green = CGFloat(drand48())
+            blue = CGFloat(drand48())
+        }
         //–––––––––––––––––––––––––––––––––––
         chartDataSet.circleColors = [NSUIColor.init(red: red, green: green, blue: blue, alpha: 1)]
         chartDataSet.lineWidth = 5
         chartDataSet.colors = [NSUIColor.init(red: red, green: green, blue: blue, alpha: 1)]
-        //––––––––––––––OPCIONAL LINEA PUNTEADA
-        //chartDataSet.colors = [NSUIColor.clear]
         chartDataSet.drawValuesEnabled = false
         
         //Cargamos el estilo de la grafica al set de datos
-        
         dataSet.append(chartDataSet)
         
         //Creamos la grafica con el set de datos
@@ -400,6 +410,8 @@ class ViewController: UIViewController {
         let chartData = LineChartData(dataSets: data)
         lineChartView.data = chartData
     }
+    
+    //MARK: - Navegacion
     
     //Se le manda al parametrosViewController los valores actuales
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

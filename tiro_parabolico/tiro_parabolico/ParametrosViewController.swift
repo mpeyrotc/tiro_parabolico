@@ -83,7 +83,6 @@ class ParametrosViewController: UIViewController {
             animationView.units = units
             // Limites
             animationView.xLimit = xLimitTextField.text!
-            animationView.yLimit = yLimitTextField.text!
             animationView.timeLimit = timeLimitTextField.text!
             animationView.graficasPrevias = graficasPrevias
             animationView.xMayor = xMayor
