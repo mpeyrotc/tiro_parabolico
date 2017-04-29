@@ -15,11 +15,9 @@ class ParametrosViewController: UIViewController {
     @IBOutlet weak var startYPosTextField: UITextField!
     @IBOutlet weak var shotAngleTextField: UITextField!
     @IBOutlet weak var valueXTextField: UITextField!
-    @IBOutlet weak var valueYTextField: UITextField!
     @IBOutlet weak var valueTimeTextField: UITextField!
     @IBOutlet weak var sgUnits: UISegmentedControl!
     @IBOutlet weak var xLimitTextField: UITextField!
-    @IBOutlet weak var yLimitTextField: UITextField!
     @IBOutlet weak var timeLimitTextField: UITextField!
     @IBOutlet weak var btnGraficar: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -97,12 +95,13 @@ class ParametrosViewController: UIViewController {
         // Solo puede haber un limite con valor
         if sender as! UIButton == btnGraficar {
             // checar que haya datos en los parametros y solo un limite
-            if (xLimitTextField.text != "" && yLimitTextField.text != "" && timeLimitTextField.text != "") || (xLimitTextField.text != "" && yLimitTextField.text != "") || (xLimitTextField.text != "" && timeLimitTextField.text != "") || (yLimitTextField.text != "" && timeLimitTextField.text != "") {
-                
-                let alerta = UIAlertController(title: "Error", message: "Solo uno de los limites  puede tener valor", preferredStyle: .alert)
-                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-                present(alerta, animated: true, completion: nil)
-                return false
+            if (xLimitTextField.text != "" || timeLimitTextField.text != "") {
+                if (xLimitTextField.text != "" && timeLimitTextField.text != "") {
+                    let alerta = UIAlertController(title: "Error", message: "Solo uno de los limites  puede tener valor", preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                    present(alerta, animated: true, completion: nil)
+                    return false
+                }
             }
             
             // Checar que solo se trate de valores numericos
