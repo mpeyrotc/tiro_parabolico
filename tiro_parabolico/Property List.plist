@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>Pregunta</key>
-		<string>Considerando que te encuentras en un edificio a una altura de ALTURA metros, si lanzas una pelota a una velocidad de VELOCIDAD metros por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo?</string>
+		<string>Considerando que te encuentras en un edificio a una altura de ALTURA metros, si lanzas una pelota a una velocidad de VELOCIDAD metros por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo? Considera un ángulo de tiro de 0 grados y una distancia x inicial de 0 m.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Considerando que te encuentras en un edificio a una altura de ALTURA pies, si lanzas una pelota a una velocidad de VELOCIDAD pies por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo?</string>
+		<string>Considerando que te encuentras en un edificio a una altura de ALTURA pies, si lanzas una pelota a una velocidad de VELOCIDAD pies por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo? Considera un ángulo de tiro de 0 grados y un desplazamiento x inicial de 0 pies.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. La velocidad con la que deja la boca del  cañón es de VELOCIDAD metros por segundo. ¿Cuál es la distancia que viaja el proyectil horizontalmente tras haber transcurrido 0.5 segundos? Si impacta el suelo antes, usar la posición donde impacta con el suelo.</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. La velocidad con la que deja la boca del cañón es de VELOCIDAD metros por segundo. ¿Cuál es la distancia que viaja el proyectil horizontalmente tras haber transcurrido un tiempo de 0.5 segundos? Si impacta el suelo antes, usar la posición donde impacta con el suelo. Considera los valores iniciales de X y Y como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. La velocidad con la que deja la boca del  cañón es de VELOCIDAD pies por segundo. ¿Cuál es la distancia que viaja el proyectil horizontalmente tras haber transcurrido 0.5 segundos? Si impacta el suelo antes, usar la posición donde impacta con el suelo.</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. La velocidad con la que deja la boca del cañón es de VELOCIDAD pies por segundo. ¿Cuál es la distancia que viaja el proyectil horizontalmente tras haber transcurrido 0.5 segundos? Si impacta el suelo antes, usar la posición donde impacta con el suelo. Considera los valores de desplazamiento de X y Y como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA metros, ¿Con qué velocidad salió del cañón?</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA metros, ¿Con qué velocidad salió del cañón? Considera los valores de X y Y iniciales como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA pies, ¿Con qué velocidad salió del cañón?</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA pies, ¿Con qué velocidad salió del cañón? Considera los valores iniciales de X y Y como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -52,7 +52,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos? Considera que no tiene desplazamiento.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -60,7 +60,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos? Considera que no tiene desplazamiento.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -68,7 +68,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos? Considere 0 metros de desplazamiento inicial.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -76,7 +76,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos? Considere 0 pies de desplazamiento inicial.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -84,7 +84,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima? El proyectil empieza en la posición inicial X = 0 y con una altura igual a 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -92,7 +92,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) dónde alcanza su altura máxima? El proyectil empieza en la posición inicial X = 0 y con una altura igual a 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -100,7 +100,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo? Considere una altura y desplazamiento horizontal de 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -108,7 +108,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo?</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es el tiempo (en segundos) donde regresa al suelo? Considere una altura y desplazamiento horizontal de 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
