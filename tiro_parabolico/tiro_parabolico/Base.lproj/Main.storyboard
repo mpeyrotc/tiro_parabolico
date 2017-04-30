@@ -735,7 +735,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                         <color key="backgroundColor" red="0.69467537810000002" green="1" blue="0.82070266680000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-WV-GQZ" userLabel="Datos">
-                                        <rect key="frame" x="434" y="19.5" width="94" height="241"/>
+                                        <rect key="frame" x="434" y="3" width="94" height="274"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IA-N1-bo5" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
@@ -808,8 +808,25 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-KI-a5i" userLabel="Height">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZm-ej-nlR">
                                                 <rect key="frame" x="0.0" y="146" width="94" height="16"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Max. H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkg-ST-Yvc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cJ-jM-09d">
+                                                        <rect key="frame" x="61" y="0.0" width="33" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-KI-a5i" userLabel="Height">
+                                                <rect key="frame" x="0.0" y="179" width="94" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Altura " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px1-iL-8xg">
                                                         <rect key="frame" x="0.0" y="0.0" width="52.5" height="16"/>
@@ -826,7 +843,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xWq-c3-fBF" userLabel="Time">
-                                                <rect key="frame" x="0.0" y="179" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="212" width="94" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tiempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-I2-3cR">
                                                         <rect key="frame" x="0.0" y="0.0" width="48.5" height="16"/>
@@ -843,7 +860,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </subviews>
                                             </stackView>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pXQ-Ft-b35">
-                                                <rect key="frame" x="0.0" y="212" width="94" height="29"/>
+                                                <rect key="frame" x="0.0" y="245" width="94" height="29"/>
                                                 <connections>
                                                     <action selector="update:" destination="BYZ-38-t0r" eventType="valueChanged" id="QVj-hk-pTb"/>
                                                 </connections>
@@ -876,6 +893,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <outlet property="distanceLabel" destination="6Oy-Pw-3Tg" id="xxA-pn-Cd0"/>
                         <outlet property="heightLabel" destination="MTY-Nr-cX1" id="xrJ-2a-d1t"/>
                         <outlet property="lineChartView" destination="zaE-df-63k" id="GA6-eA-Con"/>
+                        <outlet property="maxHeightLabel" destination="6cJ-jM-09d" id="1sC-48-eO7"/>
                         <outlet property="stepperGrafica" destination="pXQ-Ft-b35" id="W5v-2Y-2Hk"/>
                         <outlet property="timeLabel" destination="u09-i7-B7c" id="VEb-cr-8sr"/>
                         <outlet property="xVelocityLabel" destination="VNF-kB-OGL" id="8ey-eF-chV"/>

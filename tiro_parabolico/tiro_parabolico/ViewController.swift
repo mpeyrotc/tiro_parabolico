@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
     @IBOutlet weak var stepperGrafica: UIStepper!
+    @IBOutlet weak var maxHeightLabel: UILabel!
     
     var yAxis = [Double]()
     var xAxis = [Double]()
@@ -81,11 +82,13 @@ class ViewController: UIViewController {
         if units == "IS" {
             yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(0))
             xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(0))
+            maxHeightLabel.text = String(format: "%.2f m", alturaMayor)
             distanceLabel.text = String(format: "%.2f m", shot.xForTime(0)!)
             heightLabel.text = String(format: "%.2f m", shot.yForTime(0)!)
         } else {
             yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(0))
             xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(0))
+            maxHeightLabel.text = String(format: "%.2f f", alturaMayor)
             distanceLabel.text = String(format: "%.2f f", shot.xForTime(0)!)
             heightLabel.text = String(format: "%.2f f", shot.yForTime(0)!)
         }
@@ -240,11 +243,13 @@ class ViewController: UIViewController {
             if units == "IS" {
                 yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(shot.finalTime()))
                 xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(shot.finalTime()))
+                maxHeightLabel.text = String(format: "%.2f m", alturaMayor)
                 distanceLabel.text = String(format: "%.2f m", shot.xForTime(shot.finalTime())!)
                 heightLabel.text = String(format: "%.2f m", shot.yForTime(shot.finalTime())!)
             } else {
                 yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(shot.finalTime()))
                 xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(shot.finalTime()))
+                maxHeightLabel.text = String(format: "%.2f f", alturaMayor)
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(shot.finalTime())!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(shot.finalTime())!)
             }
@@ -254,11 +259,13 @@ class ViewController: UIViewController {
             if units == "IS" {
                 yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(sender.value))
                 xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(sender.value))
+                maxHeightLabel.text = String(format: "%.2f m", alturaMayor)
                 distanceLabel.text = String(format: "%.2f m", shot.xForTime(sender.value)!)
                 heightLabel.text = String(format: "%.2f m", shot.yForTime(sender.value)!)
             } else {
                 yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(sender.value))
                 xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(sender.value))
+                maxHeightLabel.text = String(format: "%.2f f", alturaMayor)
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(sender.value)!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(sender.value)!)
             }
@@ -269,11 +276,13 @@ class ViewController: UIViewController {
             if units == "IS" {
                 yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(Double(timeLimit)!))
                 xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(Double(timeLimit)!))
+                maxHeightLabel.text = String(format: "%.2f m", alturaMayor)
                 distanceLabel.text = String(format: "%.2f m", shot.xForTime(Double(timeLimit)!)!)
                 heightLabel.text = String(format: "%.2f m", shot.yForTime(Double(timeLimit)!)!)
             } else {
                 yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(Double(timeLimit)!))
                 xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(Double(timeLimit)!))
+                maxHeightLabel.text = String(format: "%.2f f", alturaMayor)
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(Double(timeLimit)!)!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(Double(timeLimit)!)!)
             }
