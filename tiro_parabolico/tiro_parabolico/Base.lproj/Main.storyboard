@@ -581,7 +581,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Respuesta: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ox-r2-EIb">
-                                <rect key="frame" x="30" y="257" width="90" height="28.5"/>
+                                <rect key="frame" x="30" y="257" width="90" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Ox-r2-EIb" secondAttribute="height" multiplier="22:7" id="UaM-AF-R06"/>
                                 </constraints>
@@ -658,6 +658,14 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitAnswer:" destination="JXk-sX-lIt" eventType="touchUpInside" id="6zZ-8z-PCG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AJ-8b-W7P">
+                                <rect key="frame" x="132" y="285" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sin parametros"/>
+                                <connections>
+                                    <segue destination="qmj-Mk-lvw" kind="show" identifier="sin_parametrar" id="Kiq-Kq-6LQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -947,6 +955,6 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
         <image name="tituloInicio" width="512" height="97"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="txx-nf-4Xa"/>
+        <segue reference="Kiq-Kq-6LQ"/>
     </inferredMetricsTieBreakers>
 </document>

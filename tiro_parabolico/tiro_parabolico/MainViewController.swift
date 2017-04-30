@@ -18,6 +18,11 @@ class MainViewController: UIViewController {
     var questions: NSArray!
     var currentQuestion = -1
     var currentAnswer: Double!
+    
+    var initialX: Double!
+    var initialY: Double!
+    var initialAngle: Double!
+    var initialVelocity: Double!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +63,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
             question = question.replacingOccurrences(of: "ALTURA", with: String(height))
             
+            initialVelocity = Double(velocity)
+            initialY = Double(height)
+            initialX = 0.0
+            initialAngle = 0.0
+            
             let time = (Double(velocity) * sin(0) + sqrt(pow(Double(velocity) * sin(0), 2) - 4.0 * (0.5 * -9.8) * Double(height))) / 9.8
             currentAnswer = (Double(velocity) * cos(0)) * time
             break
@@ -66,6 +76,11 @@ class MainViewController: UIViewController {
             let height = Int(arc4random_uniform(30) + 1) * 3
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
             question = question.replacingOccurrences(of: "ALTURA", with: String(height))
+            
+            initialVelocity = Double(velocity)
+            initialY = Double(height)
+            initialX = 0.0
+            initialAngle = 0.0
             
             let time = (Double(velocity) * sin(0) + sqrt(pow(Double(velocity) * sin(0), 2) - 4.0 * (0.5 * -32.0) * Double(height))) / 32.0
             currentAnswer = (Double(velocity) * cos(0)) * time
@@ -83,6 +98,11 @@ class MainViewController: UIViewController {
                 time = time2
             }
             
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
+            
             currentAnswer = (Double(velocity) * cos(Double(grados) * 3.1416 / 180)) * time
             break
         case "DIST_TIME_EN":
@@ -97,6 +117,11 @@ class MainViewController: UIViewController {
             if time2 < 0.5 {
                 time = time2
             }
+            
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = (Double(velocity) * cos(Double(grados) * 3.1416 / 180)) * time
             break
@@ -113,6 +138,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "TIEMPO", with: String(describing: tiempoS))
             question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: distanciaS))
+            
+            initialVelocity = 1.0
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = Double(velocity)
             break
@@ -131,6 +161,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "TIEMPO", with: String(describing: tiempoS))
             question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: distanciaS))
             
+            initialVelocity = 1.0
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
+            
             currentAnswer = Double(velocity)
             break
         case "POSX_TIME":
@@ -142,6 +177,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = Double(shot.xForTime(Double(time))!)
             break
@@ -156,6 +196,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
             
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
+            
             currentAnswer = Double(shot.xForTime(Double(time))!)
             break
         case "POSY_TIME":
@@ -167,6 +212,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = Double(shot.yForTime(Double(time))!)
             break
@@ -181,6 +231,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "TIEMPO", with: String(time))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
             
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
+            
             currentAnswer = Double(shot.yForTime(Double(time))!)
             break
         case "MAX_HEIGHT_TIME":
@@ -190,6 +245,11 @@ class MainViewController: UIViewController {
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = shot.finalTime() / 2.0
             break
@@ -202,6 +262,11 @@ class MainViewController: UIViewController {
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
             
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
+            
             currentAnswer = shot.finalTime() / 2.0
             break
         case "DIST_GROUND_2":
@@ -211,6 +276,11 @@ class MainViewController: UIViewController {
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = shot.finalTime()
             break
@@ -222,6 +292,11 @@ class MainViewController: UIViewController {
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "VELOCIDAD", with: String(velocity))
+            
+            initialVelocity = Double(velocity)
+            initialY = 0.0
+            initialX = 0.0
+            initialAngle = Double(grados)
             
             currentAnswer = shot.finalTime()
             break
@@ -271,7 +346,19 @@ class MainViewController: UIViewController {
     // MARK: - Navigation
 
     override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+        if segue.identifier == "parametrar" {
+            let targetView = segue.destination as! ParametrosViewController
+            
+            targetView.hasParameters = true
+            targetView.initialX = initialX
+            targetView.initialY = initialY
+            targetView.initialAngle = initialAngle
+            targetView.initialVelocity = initialVelocity
+        } else {
+            let targetView = segue.destination as! ParametrosViewController
+            
+            targetView.hasParameters = false
+        }
     }
     
     // MARK: - Keyboard methods

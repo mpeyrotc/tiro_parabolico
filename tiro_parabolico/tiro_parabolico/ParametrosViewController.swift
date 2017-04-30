@@ -31,12 +31,25 @@ class ParametrosViewController: UIViewController {
     var xMenor:Double!
     var xMayor:Double!
     var alturaMayor:Double!
+    var hasParameters = false
+    
+    var initialVelocity: Double!
+    var initialX: Double!
+    var initialY: Double!
+    var initialAngle: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        resetValues()
+        if hasParameters {
+            initialVelocityTextField.text = String(initialVelocity)
+            startXPosTextField.text = String(initialX)
+            startYPosTextField.text = String(initialY)
+            shotAngleTextField.text = String(initialAngle)
+        } else {
+            resetValues()
+        }
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ParametrosViewController.removeKeyboard))
         
@@ -59,6 +72,7 @@ class ParametrosViewController: UIViewController {
     @IBAction func resetParemetros(_ sender: UIButton) {
         resetValues()
     }
+    
     func resetValues() {
         initialVelocityTextField.text = String(20)
         startXPosTextField.text = String(0)
