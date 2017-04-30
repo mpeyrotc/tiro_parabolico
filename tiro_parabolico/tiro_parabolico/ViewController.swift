@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     //MARK: - Variables
     @IBOutlet weak var yVelocityLabel: UILabel!
+    @IBOutlet weak var xVelocityLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -79,10 +80,12 @@ class ViewController: UIViewController {
         // Imprimimos la informacion del objeto "shot" con tiempo 0
         if units == "IS" {
             yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(0))
+            xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(0))
             distanceLabel.text = String(format: "%.2f m", shot.xForTime(0)!)
             heightLabel.text = String(format: "%.2f m", shot.yForTime(0)!)
         } else {
             yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(0))
+            xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(0))
             distanceLabel.text = String(format: "%.2f f", shot.xForTime(0)!)
             heightLabel.text = String(format: "%.2f f", shot.yForTime(0)!)
         }
@@ -236,10 +239,12 @@ class ViewController: UIViewController {
             timeLabel.text = String(format: "%.2f s", shot.finalTime())
             if units == "IS" {
                 yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(shot.finalTime()))
+                xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(shot.finalTime()))
                 distanceLabel.text = String(format: "%.2f m", shot.xForTime(shot.finalTime())!)
                 heightLabel.text = String(format: "%.2f m", shot.yForTime(shot.finalTime())!)
             } else {
                 yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(shot.finalTime()))
+                xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(shot.finalTime()))
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(shot.finalTime())!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(shot.finalTime())!)
             }
@@ -248,10 +253,12 @@ class ViewController: UIViewController {
             timeLabel.text = String(format: "%.2f s", sender.value)
             if units == "IS" {
                 yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(sender.value))
+                xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(sender.value))
                 distanceLabel.text = String(format: "%.2f m", shot.xForTime(sender.value)!)
                 heightLabel.text = String(format: "%.2f m", shot.yForTime(sender.value)!)
             } else {
                 yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(sender.value))
+                xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(sender.value))
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(sender.value)!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(sender.value)!)
             }
@@ -261,10 +268,12 @@ class ViewController: UIViewController {
             timeLabel.text = String(format: "%.2f s", Double(timeLimit)!)
             if units == "IS" {
                 yVelocityLabel.text = String(format: "%.2f m/s", shot.getYVelocity(Double(timeLimit)!))
+                xVelocityLabel.text = String(format: "%.2f m/s", shot.getXVelocity(Double(timeLimit)!))
                 distanceLabel.text = String(format: "%.2f m", shot.xForTime(Double(timeLimit)!)!)
                 heightLabel.text = String(format: "%.2f m", shot.yForTime(Double(timeLimit)!)!)
             } else {
                 yVelocityLabel.text = String(format: "%.2f f/s", shot.getYVelocity(Double(timeLimit)!))
+                xVelocityLabel.text = String(format: "%.2f f/s", shot.getXVelocity(Double(timeLimit)!))
                 distanceLabel.text = String(format: "%.2f f", shot.xForTime(Double(timeLimit)!)!)
                 heightLabel.text = String(format: "%.2f f", shot.yForTime(Double(timeLimit)!)!)
             }
