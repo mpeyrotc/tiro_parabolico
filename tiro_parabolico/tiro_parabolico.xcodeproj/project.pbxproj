@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28371EF71EB52C5D005381C4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28371EF61EB52C5D005381C4 /* PDFViewController.swift */; };
 		286795581E7A42A900C1C2FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286795571E7A42A900C1C2FD /* MainViewController.swift */; };
 		2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9611E74C443006C0C30 /* AppDelegate.swift */; };
 		2877A9641E74C443006C0C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9631E74C443006C0C30 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		2877A9771E74C443006C0C30 /* tiro_parabolicoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9761E74C443006C0C30 /* tiro_parabolicoTests.swift */; };
 		2877A9821E74C443006C0C30 /* tiro_parabolicoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */; };
 		288E06D41E77188E00F3E049 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288E06D31E77188E00F3E049 /* Shot.swift */; };
+		28FB60531EB57FF60007C2DD /* hoz.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 28FB60521EB57FF60007C2DD /* hoz.pdf */; };
 		4D62002A1E79B05D00339DD7 /* ChartsAPI in Resources */ = {isa = PBXBuildFile; fileRef = 4D6200291E79B05D00339DD7 /* ChartsAPI */; };
 		4D6200371E79B0AA00339DD7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; };
 		4D6200381E79B0AA00339DD7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28371EF61EB52C5D005381C4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		286795571E7A42A900C1C2FD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2877A95E1E74C443006C0C30 /* tiro_parabolico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiro_parabolico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2877A9611E74C443006C0C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiro_parabolicoUITests.swift; sourceTree = "<group>"; };
 		2877A9831E74C443006C0C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288E06D31E77188E00F3E049 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		28FB60521EB57FF60007C2DD /* hoz.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hoz.pdf; sourceTree = "<group>"; };
 		4D6200291E79B05D00339DD7 /* ChartsAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ChartsAPI; path = ../ChartsAPI; sourceTree = "<group>"; };
 		4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../ChartsAPI/Charts.xcodeproj; sourceTree = "<group>"; };
 		61BC8D5A1EAE542300BCABFC /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradiente.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		2877A9551E74C443006C0C30 = {
 			isa = PBXGroup;
 			children = (
+				28FB60521EB57FF60007C2DD /* hoz.pdf */,
 				4D6200291E79B05D00339DD7 /* ChartsAPI */,
 				61E821B11E79022900220894 /* Property List.plist */,
 				288E06D31E77188E00F3E049 /* Shot.swift */,
@@ -168,6 +173,7 @@
 				2877A9611E74C443006C0C30 /* AppDelegate.swift */,
 				2877A9631E74C443006C0C30 /* ViewController.swift */,
 				2877A9651E74C443006C0C30 /* Main.storyboard */,
+				28371EF61EB52C5D005381C4 /* PDFViewController.swift */,
 				61BC8D601EAEAAA600BCABFC /* ButtonGradient.swift */,
 				61F468201E8C3CB40052B829 /* AcercaViewController.swift */,
 				61E646831E8B33E800587BE9 /* ParametrosViewController.swift */,
@@ -349,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FB60531EB57FF60007C2DD /* hoz.pdf in Resources */,
 				4D62002A1E79B05D00339DD7 /* ChartsAPI in Resources */,
 				2877A96C1E74C443006C0C30 /* LaunchScreen.storyboard in Resources */,
 				2877A9691E74C443006C0C30 /* Assets.xcassets in Resources */,
@@ -383,6 +390,7 @@
 				2877A9641E74C443006C0C30 /* ViewController.swift in Sources */,
 				2877A9621E74C443006C0C30 /* AppDelegate.swift in Sources */,
 				61F468211E8C3CB40052B829 /* AcercaViewController.swift in Sources */,
+				28371EF71EB52C5D005381C4 /* PDFViewController.swift in Sources */,
 				61BC8D611EAEAAA600BCABFC /* ButtonGradient.swift in Sources */,
 				61BC8D5B1EAE542300BCABFC /* Gradiente.swift in Sources */,
 				61E6467F1E8B1CE900587BE9 /* InicioViewController.swift in Sources */,
