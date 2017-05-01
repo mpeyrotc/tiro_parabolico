@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -292,44 +292,41 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSy-V3-GcF">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="256"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parámetros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-GT-1yX">
-                                                <rect key="frame" x="119" y="15" width="94" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parámetros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-GT-1yX">
+                                                <rect key="frame" x="175" y="15" width="93" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidad inicial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riu-Za-ghZ">
-                                                <rect key="frame" x="58" y="49" width="141" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="Velocidad inicial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riu-Za-ghZ">
+                                                <rect key="frame" x="43" y="51" width="123" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Posición X inicial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-f8-iMt">
-                                                <rect key="frame" x="58" y="93" width="141" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" verticalCompressionResistancePriority="758" text="Posición X inicial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtK-f8-iMt">
+                                                <rect key="frame" x="38" y="91" width="128" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Posición Y inicial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7i-40-nDf">
-                                                <rect key="frame" x="58" y="141" width="141" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posición Y inicial" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7i-40-nDf">
+                                                <rect key="frame" x="39" y="131" width="127" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Angulo de disparo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A6-EY-IK2">
-                                                <rect key="frame" x="58" y="185" width="141" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="756" text="Angulo de disparo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A6-EY-IK2">
+                                                <rect key="frame" x="27" y="171" width="139" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-0A-tOW">
-                                                <rect key="frame" x="207" y="88" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-0A-tOW">
+                                                <rect key="frame" x="171" y="86" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="mmc-4a-Vhq"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -337,9 +334,11 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <outlet property="delegate" destination="qmj-Mk-lvw" id="DzB-Jy-8pU"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B2-92-665">
-                                                <rect key="frame" x="207" y="137" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="257" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B2-92-665">
+                                                <rect key="frame" x="171" y="126" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="kLM-Ms-uC7"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -347,9 +346,11 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <outlet property="delegate" destination="qmj-Mk-lvw" id="zUP-Az-9ee"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bF2-PO-1yy">
-                                                <rect key="frame" x="207" y="44" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="258" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bF2-PO-1yy">
+                                                <rect key="frame" x="171" y="46" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="3Yx-eZ-aqY"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -357,9 +358,11 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <outlet property="delegate" destination="qmj-Mk-lvw" id="yoI-fv-270"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVy-Mw-bbG">
-                                                <rect key="frame" x="207" y="180" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="757" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVy-Mw-bbG">
+                                                <rect key="frame" x="171" y="166" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="Jin-IF-Z4X"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -367,30 +370,20 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <outlet property="delegate" destination="qmj-Mk-lvw" id="euy-25-Ngc"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Límites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3H-gp-4ab">
-                                                <rect key="frame" x="399" y="15" width="58" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Límites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3H-gp-4ab">
+                                                <rect key="frame" x="466" y="15" width="58" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-iU-dlw">
-                                                <rect key="frame" x="345" y="49" width="60" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-iU-dlw">
+                                                <rect key="frame" x="426" y="51" width="12" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiempo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MN-6C-ita">
-                                                <rect key="frame" x="345" y="141" width="60" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7N-fM-shr">
-                                                <rect key="frame" x="427" y="44" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7N-fM-shr">
+                                                <rect key="frame" x="443" y="46" width="81" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -398,26 +391,14 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <outlet property="delegate" destination="qmj-Mk-lvw" id="0vi-gx-HZG"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="luy-7I-cch">
-                                                <rect key="frame" x="427" y="137" width="97" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="qmj-Mk-lvw" id="alg-lN-0YR"/>
-                                                </connections>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unidades" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTC-ox-spG">
-                                                <rect key="frame" x="330" y="185" width="75" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidades" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTC-ox-spG">
+                                                <rect key="frame" x="365" y="172" width="73" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oB0-ao-ykv">
-                                                <rect key="frame" x="427" y="178" width="97" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oB0-ao-ykv">
+                                                <rect key="frame" x="443" y="168" width="81" height="29"/>
                                                 <segments>
                                                     <segment title="Mts"/>
                                                     <segment title="Pies"/>
@@ -426,9 +407,8 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <action selector="changedUnits:" destination="qmj-Mk-lvw" eventType="valueChanged" id="kxR-wV-HkK"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqO-mv-Vg6" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="261" y="219" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqO-mv-Vg6" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
+                                                <rect key="frame" x="229" y="206" width="39" height="43"/>
                                                 <state key="normal" title="Reset">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -447,9 +427,8 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <action selector="resetParemetros:" destination="qmj-Mk-lvw" eventType="touchUpInside" id="uSd-1C-5qI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-Jj-6Th" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="455" y="223" width="69" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-Jj-6Th" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
+                                                <rect key="frame" x="469" y="212" width="55" height="30"/>
                                                 <state key="normal" title="Graficar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -468,8 +447,78 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="graficar" id="2MP-ug-9u1"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tiempo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MN-6C-ita">
+                                                <rect key="frame" x="380" y="107.5" width="58" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="luy-7I-cch">
+                                                <rect key="frame" x="443" y="103" width="81" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="qmj-Mk-lvw" id="alg-lN-0YR"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="GVy-Mw-bbG" firstAttribute="width" secondItem="bF2-PO-1yy" secondAttribute="width" id="1Ti-LR-eKE"/>
+                                            <constraint firstItem="P9K-GT-1yX" firstAttribute="trailing" secondItem="bF2-PO-1yy" secondAttribute="trailing" id="2eh-jJ-vwh"/>
+                                            <constraint firstItem="6VF-0A-tOW" firstAttribute="leading" secondItem="QtK-f8-iMt" secondAttribute="trailing" constant="5" id="7Nu-J0-uxD"/>
+                                            <constraint firstItem="0B2-92-665" firstAttribute="top" secondItem="6VF-0A-tOW" secondAttribute="bottom" constant="10" id="95A-qn-dOK"/>
+                                            <constraint firstItem="v3H-gp-4ab" firstAttribute="trailing" secondItem="P7N-fM-shr" secondAttribute="trailing" id="9ek-ge-7iw"/>
+                                            <constraint firstItem="GVy-Mw-bbG" firstAttribute="centerY" secondItem="6A6-EY-IK2" secondAttribute="centerY" id="9mB-mK-mEM"/>
+                                            <constraint firstItem="6A6-EY-IK2" firstAttribute="trailing" secondItem="Riu-Za-ghZ" secondAttribute="trailing" id="ESt-se-0lW"/>
+                                            <constraint firstItem="kqO-mv-Vg6" firstAttribute="trailing" secondItem="GVy-Mw-bbG" secondAttribute="trailing" id="Ffk-Zl-gFA"/>
+                                            <constraint firstItem="P7N-fM-shr" firstAttribute="top" secondItem="v3H-gp-4ab" secondAttribute="bottom" constant="10" id="GLO-Hw-Ser"/>
+                                            <constraint firstItem="0B2-92-665" firstAttribute="leading" secondItem="W7i-40-nDf" secondAttribute="trailing" constant="5" id="Iij-Iw-yQk"/>
+                                            <constraint firstItem="6VF-0A-tOW" firstAttribute="centerY" secondItem="QtK-f8-iMt" secondAttribute="centerY" id="K2J-uS-VTF"/>
+                                            <constraint firstItem="0B2-92-665" firstAttribute="leading" secondItem="bF2-PO-1yy" secondAttribute="leading" id="KeU-1F-U4h"/>
+                                            <constraint firstItem="GVy-Mw-bbG" firstAttribute="leading" secondItem="bF2-PO-1yy" secondAttribute="leading" id="KrR-Ia-BXy"/>
+                                            <constraint firstItem="GRG-Jj-6Th" firstAttribute="trailing" secondItem="oB0-ao-ykv" secondAttribute="trailing" id="L7t-Ri-eNF"/>
+                                            <constraint firstItem="P7N-fM-shr" firstAttribute="centerY" secondItem="Fsn-iU-dlw" secondAttribute="centerY" id="LhU-Y9-xA6"/>
+                                            <constraint firstItem="P9K-GT-1yX" firstAttribute="leading" secondItem="tSy-V3-GcF" secondAttribute="leading" constant="175" id="Lhl-2H-BH2"/>
+                                            <constraint firstItem="0B2-92-665" firstAttribute="trailing" secondItem="bF2-PO-1yy" secondAttribute="trailing" id="M4u-5l-W5a"/>
+                                            <constraint firstItem="luy-7I-cch" firstAttribute="leading" secondItem="1MN-6C-ita" secondAttribute="trailing" constant="5" id="Mf6-xb-PWg"/>
+                                            <constraint firstItem="oB0-ao-ykv" firstAttribute="leading" secondItem="P7N-fM-shr" secondAttribute="leading" id="Msm-FX-X5v"/>
+                                            <constraint firstItem="luy-7I-cch" firstAttribute="width" secondItem="P7N-fM-shr" secondAttribute="width" id="P1H-Td-u5i"/>
+                                            <constraint firstItem="P7N-fM-shr" firstAttribute="leading" secondItem="Fsn-iU-dlw" secondAttribute="trailing" constant="5" id="Pnm-88-XGG"/>
+                                            <constraint firstItem="bF2-PO-1yy" firstAttribute="top" secondItem="P9K-GT-1yX" secondAttribute="bottom" constant="10" id="QxV-iL-aBI"/>
+                                            <constraint firstItem="bF2-PO-1yy" firstAttribute="leading" secondItem="Riu-Za-ghZ" secondAttribute="trailing" constant="5" id="RX1-r8-C6s"/>
+                                            <constraint firstItem="luy-7I-cch" firstAttribute="leading" secondItem="P7N-fM-shr" secondAttribute="leading" id="WAu-Gr-cmv"/>
+                                            <constraint firstItem="0B2-92-665" firstAttribute="centerY" secondItem="W7i-40-nDf" secondAttribute="centerY" id="Wta-JZ-CIQ"/>
+                                            <constraint firstItem="0B2-92-665" firstAttribute="width" secondItem="bF2-PO-1yy" secondAttribute="width" id="Xf1-rN-cUn"/>
+                                            <constraint firstItem="6VF-0A-tOW" firstAttribute="leading" secondItem="bF2-PO-1yy" secondAttribute="leading" id="Y3w-Kp-LJC"/>
+                                            <constraint firstItem="bF2-PO-1yy" firstAttribute="trailing" secondItem="P9K-GT-1yX" secondAttribute="trailing" id="Yvz-eH-E20"/>
+                                            <constraint firstItem="bF2-PO-1yy" firstAttribute="centerY" secondItem="Riu-Za-ghZ" secondAttribute="centerY" id="ZFY-wY-cH2"/>
+                                            <constraint firstItem="zTC-ox-spG" firstAttribute="top" secondItem="1MN-6C-ita" secondAttribute="bottom" constant="43.5" id="aKc-fF-x8z"/>
+                                            <constraint firstItem="kqO-mv-Vg6" firstAttribute="top" secondItem="GVy-Mw-bbG" secondAttribute="bottom" constant="10" id="av8-aM-fcs"/>
+                                            <constraint firstItem="GVy-Mw-bbG" firstAttribute="trailing" secondItem="bF2-PO-1yy" secondAttribute="trailing" id="axm-LM-7i2"/>
+                                            <constraint firstItem="luy-7I-cch" firstAttribute="centerY" secondItem="1MN-6C-ita" secondAttribute="centerY" id="ci4-Ih-MRp"/>
+                                            <constraint firstItem="v3H-gp-4ab" firstAttribute="top" secondItem="tSy-V3-GcF" secondAttribute="top" constant="15" id="dM1-DV-IxN"/>
+                                            <constraint firstItem="oB0-ao-ykv" firstAttribute="width" secondItem="P7N-fM-shr" secondAttribute="width" id="eDU-FU-xja"/>
+                                            <constraint firstItem="GVy-Mw-bbG" firstAttribute="leading" secondItem="6A6-EY-IK2" secondAttribute="trailing" constant="5" id="eIO-Q9-cv4"/>
+                                            <constraint firstItem="W7i-40-nDf" firstAttribute="trailing" secondItem="Riu-Za-ghZ" secondAttribute="trailing" id="gTp-LY-FLb"/>
+                                            <constraint firstItem="6VF-0A-tOW" firstAttribute="top" secondItem="bF2-PO-1yy" secondAttribute="bottom" constant="10" id="h40-oQ-QeZ"/>
+                                            <constraint firstItem="P9K-GT-1yX" firstAttribute="top" secondItem="tSy-V3-GcF" secondAttribute="top" constant="15" id="iH6-e7-e3I"/>
+                                            <constraint firstItem="GRG-Jj-6Th" firstAttribute="centerY" secondItem="kqO-mv-Vg6" secondAttribute="centerY" id="iRF-VH-ZvC"/>
+                                            <constraint firstItem="zTC-ox-spG" firstAttribute="trailing" secondItem="Fsn-iU-dlw" secondAttribute="trailing" id="jiZ-nU-Xfz"/>
+                                            <constraint firstAttribute="bottom" secondItem="kqO-mv-Vg6" secondAttribute="bottom" constant="7" id="k1h-eb-BO2"/>
+                                            <constraint firstItem="1MN-6C-ita" firstAttribute="trailing" secondItem="Fsn-iU-dlw" secondAttribute="trailing" id="kB6-Bs-Zbv"/>
+                                            <constraint firstItem="v3H-gp-4ab" firstAttribute="centerY" secondItem="P9K-GT-1yX" secondAttribute="centerY" id="le9-hj-bfH"/>
+                                            <constraint firstItem="GVy-Mw-bbG" firstAttribute="top" secondItem="0B2-92-665" secondAttribute="bottom" constant="10" id="m2z-4R-IrH"/>
+                                            <constraint firstItem="oB0-ao-ykv" firstAttribute="centerY" secondItem="zTC-ox-spG" secondAttribute="centerY" id="nsR-6W-6UM"/>
+                                            <constraint firstItem="6VF-0A-tOW" firstAttribute="trailing" secondItem="bF2-PO-1yy" secondAttribute="trailing" id="oPf-Yg-TpL"/>
+                                            <constraint firstItem="QtK-f8-iMt" firstAttribute="trailing" secondItem="Riu-Za-ghZ" secondAttribute="trailing" id="pXz-ei-gW9"/>
+                                            <constraint firstItem="v3H-gp-4ab" firstAttribute="height" secondItem="P9K-GT-1yX" secondAttribute="height" id="rAU-7e-9Lj"/>
+                                            <constraint firstAttribute="trailing" secondItem="v3H-gp-4ab" secondAttribute="trailing" constant="44" id="sUV-s0-fxf"/>
+                                            <constraint firstItem="6VF-0A-tOW" firstAttribute="width" secondItem="bF2-PO-1yy" secondAttribute="width" id="sea-fI-0r1"/>
+                                            <constraint firstItem="1MN-6C-ita" firstAttribute="top" secondItem="Fsn-iU-dlw" secondAttribute="bottom" constant="35.5" id="tVm-wm-kxa"/>
+                                            <constraint firstItem="oB0-ao-ykv" firstAttribute="leading" secondItem="zTC-ox-spG" secondAttribute="trailing" constant="5" id="yfi-gA-nhv"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                 <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
