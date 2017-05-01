@@ -408,7 +408,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqO-mv-Vg6" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="229" y="206" width="39" height="43"/>
+                                                <rect key="frame" x="229" y="206" width="39" height="30"/>
                                                 <state key="normal" title="Reset">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -428,7 +428,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-Jj-6Th" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="469" y="212" width="55" height="30"/>
+                                                <rect key="frame" x="469" y="206" width="55" height="30"/>
                                                 <state key="normal" title="Graficar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -448,7 +448,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tiempo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MN-6C-ita">
-                                                <rect key="frame" x="380" y="107.5" width="58" height="21"/>
+                                                <rect key="frame" x="380" y="108" width="58" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -495,7 +495,6 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                             <constraint firstItem="bF2-PO-1yy" firstAttribute="trailing" secondItem="P9K-GT-1yX" secondAttribute="trailing" id="Yvz-eH-E20"/>
                                             <constraint firstItem="bF2-PO-1yy" firstAttribute="centerY" secondItem="Riu-Za-ghZ" secondAttribute="centerY" id="ZFY-wY-cH2"/>
                                             <constraint firstItem="zTC-ox-spG" firstAttribute="top" secondItem="1MN-6C-ita" secondAttribute="bottom" constant="43.5" id="aKc-fF-x8z"/>
-                                            <constraint firstItem="kqO-mv-Vg6" firstAttribute="top" secondItem="GVy-Mw-bbG" secondAttribute="bottom" constant="10" id="av8-aM-fcs"/>
                                             <constraint firstItem="GVy-Mw-bbG" firstAttribute="trailing" secondItem="bF2-PO-1yy" secondAttribute="trailing" id="axm-LM-7i2"/>
                                             <constraint firstItem="luy-7I-cch" firstAttribute="centerY" secondItem="1MN-6C-ita" secondAttribute="centerY" id="ci4-Ih-MRp"/>
                                             <constraint firstItem="v3H-gp-4ab" firstAttribute="top" secondItem="tSy-V3-GcF" secondAttribute="top" constant="15" id="dM1-DV-IxN"/>
@@ -506,7 +505,6 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                             <constraint firstItem="P9K-GT-1yX" firstAttribute="top" secondItem="tSy-V3-GcF" secondAttribute="top" constant="15" id="iH6-e7-e3I"/>
                                             <constraint firstItem="GRG-Jj-6Th" firstAttribute="centerY" secondItem="kqO-mv-Vg6" secondAttribute="centerY" id="iRF-VH-ZvC"/>
                                             <constraint firstItem="zTC-ox-spG" firstAttribute="trailing" secondItem="Fsn-iU-dlw" secondAttribute="trailing" id="jiZ-nU-Xfz"/>
-                                            <constraint firstAttribute="bottom" secondItem="kqO-mv-Vg6" secondAttribute="bottom" constant="7" id="k1h-eb-BO2"/>
                                             <constraint firstItem="1MN-6C-ita" firstAttribute="trailing" secondItem="Fsn-iU-dlw" secondAttribute="trailing" id="kB6-Bs-Zbv"/>
                                             <constraint firstItem="v3H-gp-4ab" firstAttribute="centerY" secondItem="P9K-GT-1yX" secondAttribute="centerY" id="le9-hj-bfH"/>
                                             <constraint firstItem="GVy-Mw-bbG" firstAttribute="top" secondItem="0B2-92-665" secondAttribute="bottom" constant="10" id="m2z-4R-IrH"/>
@@ -517,6 +515,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                             <constraint firstAttribute="trailing" secondItem="v3H-gp-4ab" secondAttribute="trailing" constant="44" id="sUV-s0-fxf"/>
                                             <constraint firstItem="6VF-0A-tOW" firstAttribute="width" secondItem="bF2-PO-1yy" secondAttribute="width" id="sea-fI-0r1"/>
                                             <constraint firstItem="1MN-6C-ita" firstAttribute="top" secondItem="Fsn-iU-dlw" secondAttribute="bottom" constant="35.5" id="tVm-wm-kxa"/>
+                                            <constraint firstItem="kqO-mv-Vg6" firstAttribute="top" secondItem="GVy-Mw-bbG" secondAttribute="bottom" constant="10" id="xSd-IV-jzE"/>
                                             <constraint firstItem="oB0-ao-ykv" firstAttribute="leading" secondItem="zTC-ox-spG" secondAttribute="trailing" constant="5" id="yfi-gA-nhv"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
