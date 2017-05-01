@@ -42,6 +42,7 @@ class ParametrosViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Simulación"
         if hasParameters {
             initialVelocityTextField.text = String(initialVelocity)
             startXPosTextField.text = String(initialX)
