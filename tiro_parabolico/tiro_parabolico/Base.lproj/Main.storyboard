@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d4y-9s-4Uk">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -734,18 +735,18 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9zp-R8-1Ey">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9zp-R8-1Ey">
                                 <rect key="frame" x="20" y="20" width="528" height="280"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-df-63k" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="0.0" width="426" height="280"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="349" height="280"/>
                                         <color key="backgroundColor" red="0.69467537810000002" green="1" blue="0.82070266680000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-WV-GQZ" userLabel="Datos">
-                                        <rect key="frame" x="434" y="0.0" width="94" height="280"/>
+                                        <rect key="frame" x="359" y="0.0" width="169" height="280"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IA-N1-bo5" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="9"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="169" height="9"/>
                                                 <state key="normal" title="Atrás">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -765,73 +766,73 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Vel. Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-pW-DCB">
-                                                <rect key="frame" x="0.0" y="14" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="14" width="169" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfj-k1-a8g">
-                                                <rect key="frame" x="0.0" y="35" width="94" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="35" width="169" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vel. X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQs-Ne-obC">
-                                                <rect key="frame" x="0.0" y="53.5" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="53.5" width="169" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-kB-OGL">
-                                                <rect key="frame" x="0.0" y="74.5" width="94" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="74.5" width="169" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Distancia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-MQ-d4l">
-                                                <rect key="frame" x="0.0" y="93" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="93" width="169" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oy-Pw-3Tg">
-                                                <rect key="frame" x="0.0" y="114" width="94" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="114" width="169" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max. Atura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkg-ST-Yvc">
-                                                <rect key="frame" x="0.0" y="132.5" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="132.5" width="169" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cJ-jM-09d">
-                                                <rect key="frame" x="0.0" y="153.5" width="94" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="153.5" width="169" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Altura " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px1-iL-8xg">
-                                                <rect key="frame" x="0.0" y="172" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="172" width="169" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-Nr-cX1">
-                                                <rect key="frame" x="0.0" y="193" width="94" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="193" width="169" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tiempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-I2-3cR">
-                                                <rect key="frame" x="0.0" y="211.5" width="94" height="16"/>
+                                                <rect key="frame" x="0.0" y="211.5" width="169" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u09-i7-B7c">
-                                                <rect key="frame" x="0.0" y="232.5" width="94" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="232.5" width="169" height="13.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -846,6 +847,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9a3-WV-GQZ" secondAttribute="trailing" id="jFB-SI-89K"/>
                                     <constraint firstItem="zaE-df-63k" firstAttribute="top" secondItem="9zp-R8-1Ey" secondAttribute="top" id="lVg-Bj-z4i"/>
                                 </constraints>
                             </stackView>
@@ -853,6 +855,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9zp-R8-1Ey" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lm9-hg-Wqr"/>
+                            <constraint firstItem="zaE-df-63k" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.09" id="NK3-Tj-jJq"/>
                             <constraint firstItem="9zp-R8-1Ey" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yzc-EN-drh"/>
                             <constraint firstItem="9zp-R8-1Ey" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bfh-wt-TRK"/>
                             <constraint firstItem="9zp-R8-1Ey" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jNb-Wg-qBV"/>
@@ -924,6 +927,6 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
         <image name="tituloInicio" width="512" height="97"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kiq-Kq-6LQ"/>
+        <segue reference="Pfb-BK-cVu"/>
     </inferredMetricsTieBreakers>
 </document>
