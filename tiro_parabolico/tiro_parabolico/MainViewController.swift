@@ -372,6 +372,7 @@ class MainViewController: UIViewController {
             
             targetView.hasParameters = false
         }
+        removeKeyboard()
     }
     
     // MARK: - Keyboard methods

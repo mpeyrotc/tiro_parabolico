@@ -113,6 +113,7 @@ class ParametrosViewController: UIViewController {
             animationView.xMayor = xMayor
             animationView.xMenor = xMenor
             animationView.alturaMayor = alturaMayor
+            removeKeyboard()
         }
         
     }
