@@ -23,6 +23,7 @@
 		4D6200381E79B0AA00339DD7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6200321E79B06D00339DD7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61BC8D5B1EAE542300BCABFC /* Gradiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8D5A1EAE542300BCABFC /* Gradiente.swift */; };
 		61BC8D611EAEAAA600BCABFC /* ButtonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC8D601EAEAAA600BCABFC /* ButtonGradient.swift */; };
+		61D086671EB815A0005E79E4 /* Manual.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 61D086661EB815A0005E79E4 /* Manual.pdf */; };
 		61E6467F1E8B1CE900587BE9 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */; };
 		61E646841E8B33E800587BE9 /* ParametrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E646831E8B33E800587BE9 /* ParametrosViewController.swift */; };
 		61E821B21E79022900220894 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E821B11E79022900220894 /* Property List.plist */; };
@@ -110,6 +111,7 @@
 		4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../ChartsAPI/Charts.xcodeproj; sourceTree = "<group>"; };
 		61BC8D5A1EAE542300BCABFC /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradiente.swift; sourceTree = "<group>"; };
 		61BC8D601EAEAAA600BCABFC /* ButtonGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonGradient.swift; sourceTree = "<group>"; };
+		61D086661EB815A0005E79E4 /* Manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Manual.pdf; sourceTree = "<group>"; };
 		61E6467E1E8B1CE900587BE9 /* InicioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		61E646831E8B33E800587BE9 /* ParametrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametrosViewController.swift; sourceTree = "<group>"; };
 		61E821B11E79022900220894 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				28FB60521EB57FF60007C2DD /* hoz.pdf */,
+				61D086661EB815A0005E79E4 /* Manual.pdf */,
 				4D6200291E79B05D00339DD7 /* ChartsAPI */,
 				61E821B11E79022900220894 /* Property List.plist */,
 				288E06D31E77188E00F3E049 /* Shot.swift */,
@@ -357,6 +360,7 @@
 			files = (
 				28FB60531EB57FF60007C2DD /* hoz.pdf in Resources */,
 				4D62002A1E79B05D00339DD7 /* ChartsAPI in Resources */,
+				61D086671EB815A0005E79E4 /* Manual.pdf in Resources */,
 				2877A96C1E74C443006C0C30 /* LaunchScreen.storyboard in Resources */,
 				2877A9691E74C443006C0C30 /* Assets.xcassets in Resources */,
 				61E821B21E79022900220894 /* Property List.plist in Resources */,

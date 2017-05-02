@@ -16,7 +16,7 @@ class PDFViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = Bundle.main.url(forResource: "hoz", withExtension: "pdf")
+        let url = Bundle.main.url(forResource: "Manual", withExtension: "pdf")
     
         if let url = url {
             
