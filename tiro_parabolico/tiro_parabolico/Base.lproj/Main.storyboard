@@ -92,9 +92,19 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDb-QF-IaQ" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPp-n0-jKB">
+                                <rect key="frame" x="20" y="58" width="528" height="242"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="242" id="DcH-jD-7Oz"/>
+                                </constraints>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDb-QF-IaQ" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
+                                <rect key="frame" x="20" y="6" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4Th-Ed-s5t"/>
+                                    <constraint firstAttribute="width" constant="60" id="wh3-Fv-4fY"/>
+                                </constraints>
                                 <state key="normal" title="Atrás">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -113,13 +123,16 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                     <segue destination="WYf-qQ-9VY" kind="unwind" unwindAction="unwindAcercaWithUnwindSegue:" id="CpO-xh-GnX"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPp-n0-jKB">
-                                <rect key="frame" x="20" y="58" width="528" height="242"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.54965825599999996" green="0.8340779572" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NPp-n0-jKB" firstAttribute="leading" secondItem="iDb-QF-IaQ" secondAttribute="leading" id="Bwk-4x-cKg"/>
+                            <constraint firstItem="NPp-n0-jKB" firstAttribute="top" secondItem="iDb-QF-IaQ" secondAttribute="bottom" constant="8" id="CCX-5C-sBT"/>
+                            <constraint firstItem="NPp-n0-jKB" firstAttribute="leading" secondItem="8Cg-yN-3rR" secondAttribute="leadingMargin" id="H78-2I-IcI"/>
+                            <constraint firstItem="NPp-n0-jKB" firstAttribute="trailing" secondItem="8Cg-yN-3rR" secondAttribute="trailingMargin" id="kaL-MF-ir3"/>
+                            <constraint firstItem="apt-dR-hhr" firstAttribute="top" secondItem="NPp-n0-jKB" secondAttribute="bottom" constant="20" id="scg-rx-xDn"/>
+                            <constraint firstItem="iDb-QF-IaQ" firstAttribute="top" secondItem="8Cg-yN-3rR" secondAttribute="topMargin" constant="6" id="xRJ-oF-Rfd"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                 <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
