@@ -14,7 +14,7 @@ class PDFViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         let url = Bundle.main.url(forResource: "Manual", withExtension: "pdf")
     
