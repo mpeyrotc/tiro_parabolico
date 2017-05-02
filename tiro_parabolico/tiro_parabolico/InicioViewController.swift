@@ -26,6 +26,18 @@ class InicioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        
+        return UIInterfaceOrientationMask.landscape
+        
+    }
+    
+    override var shouldAutorotate: Bool {
+        
+        return false
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

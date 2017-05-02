@@ -32,6 +32,7 @@ class Gradiente: UIView {
         let puntoFin = CGPoint(x: 0, y: self.bounds.height)
         contexto?.drawLinearGradient(gradiente!, start: puntoInicio, end: puntoFin, options: CGGradientDrawingOptions.drawsAfterEndLocation)
     }
+    
 
 
 }
