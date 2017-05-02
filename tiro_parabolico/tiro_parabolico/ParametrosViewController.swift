@@ -165,6 +165,13 @@ class ParametrosViewController: UIViewController {
                 return false
             }
             
+            if (Double(shotAngleTextField.text!)! >= 270 && Double(shotAngleTextField.text!)! < 360) && Double(startYPosTextField.text!)! == 0.0 {
+                let alerta = UIAlertController(title: "Error", message: "No se puede tener un tiro hacia abajo con una altura inicial de 0", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            }
+            
             // Checar que solo se trate de valores positivos
             if Double(startYPosTextField.text!)! < 0 ||
                     Double(initialVelocityTextField.text!)! < 0 ||
