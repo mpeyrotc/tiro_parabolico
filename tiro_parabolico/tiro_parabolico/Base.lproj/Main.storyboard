@@ -100,9 +100,9 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                 </constraints>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDb-QF-IaQ" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                <rect key="frame" x="20" y="6" width="60" height="44"/>
+                                <rect key="frame" x="20" y="20" width="60" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="4Th-Ed-s5t"/>
+                                    <constraint firstAttribute="height" constant="30" id="4Th-Ed-s5t"/>
                                     <constraint firstAttribute="width" constant="60" id="wh3-Fv-4fY"/>
                                 </constraints>
                                 <state key="normal" title="Atrás">
@@ -131,7 +131,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                             <constraint firstItem="NPp-n0-jKB" firstAttribute="leading" secondItem="8Cg-yN-3rR" secondAttribute="leadingMargin" id="H78-2I-IcI"/>
                             <constraint firstItem="NPp-n0-jKB" firstAttribute="trailing" secondItem="8Cg-yN-3rR" secondAttribute="trailingMargin" id="kaL-MF-ir3"/>
                             <constraint firstItem="apt-dR-hhr" firstAttribute="top" secondItem="NPp-n0-jKB" secondAttribute="bottom" constant="20" id="scg-rx-xDn"/>
-                            <constraint firstItem="iDb-QF-IaQ" firstAttribute="top" secondItem="8Cg-yN-3rR" secondAttribute="topMargin" constant="6" id="xRJ-oF-Rfd"/>
+                            <constraint firstItem="iDb-QF-IaQ" firstAttribute="top" secondItem="Fzl-tb-UCh" secondAttribute="bottom" id="zak-qI-u1S"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -446,7 +446,10 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqO-mv-Vg6" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="229" y="206" width="39" height="30"/>
+                                                <rect key="frame" x="218" y="206" width="50" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="nwf-kD-MY4"/>
+                                                </constraints>
                                                 <state key="normal" title="Reset">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -466,7 +469,10 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-Jj-6Th" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="469" y="206" width="55" height="30"/>
+                                                <rect key="frame" x="459" y="206" width="65" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="3cd-aD-69j"/>
+                                                </constraints>
                                                 <state key="normal" title="Graficar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -683,7 +689,10 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                         <rect key="frame" x="0.0" y="145" width="528" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-hc-IeE" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="tkT-Gq-7n8"/>
+                                                </constraints>
                                                 <state key="normal" title="Simulación">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -703,7 +712,10 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AJ-8b-W7P" customClass="ButtonGradient" customModule="tiro_parabolico" customModuleProvider="target">
-                                                <rect key="frame" x="95" y="0.0" width="127" height="30"/>
+                                                <rect key="frame" x="100" y="0.0" width="135" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="135" id="hQN-eP-fjQ"/>
+                                                </constraints>
                                                 <state key="normal" title="Simulación default">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -723,7 +735,7 @@ Tiro parabólico se distribuye como está de manera gratuita y se prohíbe su di
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xND-vu-LiN">
-                                                <rect key="frame" x="242" y="0.0" width="286" height="30"/>
+                                                <rect key="frame" x="255" y="0.0" width="273" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
