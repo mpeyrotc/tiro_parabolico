@@ -104,7 +104,7 @@
 		2877A97D1E74C443006C0C30 /* tiro_parabolicoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiro_parabolicoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2877A9811E74C443006C0C30 /* tiro_parabolicoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiro_parabolicoUITests.swift; sourceTree = "<group>"; };
 		2877A9831E74C443006C0C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		288E06D31E77188E00F3E049 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		288E06D31E77188E00F3E049 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shot.swift; path = ../Shot.swift; sourceTree = "<group>"; };
 		4D6200291E79B05D00339DD7 /* ChartsAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ChartsAPI; path = ../ChartsAPI; sourceTree = "<group>"; };
 		4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../ChartsAPI/Charts.xcodeproj; sourceTree = "<group>"; };
 		61BC8D5A1EAE542300BCABFC /* Gradiente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradiente.swift; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 				61D086661EB815A0005E79E4 /* Manual.pdf */,
 				4D6200291E79B05D00339DD7 /* ChartsAPI */,
 				61E821B11E79022900220894 /* Property List.plist */,
-				288E06D31E77188E00F3E049 /* Shot.swift */,
 				4D62002B1E79B06C00339DD7 /* Charts.xcodeproj */,
 				2877A9601E74C443006C0C30 /* tiro_parabolico */,
 				2877A9751E74C443006C0C30 /* tiro_parabolicoTests */,
@@ -170,6 +169,7 @@
 		2877A9601E74C443006C0C30 /* tiro_parabolico */ = {
 			isa = PBXGroup;
 			children = (
+				288E06D31E77188E00F3E049 /* Shot.swift */,
 				2877A9611E74C443006C0C30 /* AppDelegate.swift */,
 				2877A9631E74C443006C0C30 /* ViewController.swift */,
 				2877A9651E74C443006C0C30 /* Main.storyboard */,
