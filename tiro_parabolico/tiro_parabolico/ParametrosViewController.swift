@@ -291,8 +291,10 @@ class ParametrosViewController: UIViewController {
         var bkgndRect : CGRect = scrollView.frame
         bkgndRect.size.height += kbSize.height;
         
-        activeField!.superview!.frame = bkgndRect;
-        scrollView.setContentOffset(CGPoint(x: 0.0, y: self.activeField!.frame.origin.y-kbSize.height), animated: true)
+        if activeField != nil {
+            activeField!.superview!.frame = bkgndRect;
+            scrollView.setContentOffset(CGPoint(x: 0.0, y: self.activeField!.frame.origin.y-kbSize.height), animated: true)
+        }
     }
     
     func keyboardWillBeHidden (_ aNotification : Notification)

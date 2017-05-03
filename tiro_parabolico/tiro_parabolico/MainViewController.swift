@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var questionTextArea: UITextView!
     @IBOutlet weak var feedbackLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var simulacionButton: ButtonGradient!
+    @IBOutlet weak var simulacionDefaultButton: ButtonGradient!
    
     var questions: NSArray!
     var currentQuestion = -1
@@ -56,7 +58,22 @@ class MainViewController: UIViewController {
         
     }
     
-    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        // Solo puede haber un limite con valor
+        if (sender as! UIButton == simulacionButton) ||
+            (sender as! UIButton == simulacionDefaultButton) {
+            // checar que haya datos en los parametros y solo un limite
+            if currentQuestion == -1 {
+                let alerta = UIAlertController(title: "No se puede continuar", message: "Seleccione una pregunta para efectuar su simulación.", preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alerta, animated: true, completion: nil)
+                return false
+            }
+        }
+        return true
+    }
+
 
     @IBAction func showNewQuestion(_ sender: Any) {
         currentQuestion = Int(arc4random_uniform(UInt32(questions.count)))
