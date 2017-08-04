@@ -160,14 +160,11 @@ class MainViewController: UIViewController {
             let velocity = Int(arc4random_uniform(71) + 10)
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
             
-            let distancia = shot.xForTime(shot.finalTime())!
-            let distanciaS = String(format: "%.4f", distancia)
             let tiempo = shot.finalTime()
             let tiempoS = String(format: "%.2f", tiempo)
             
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "TIEMPO", with: String(describing: tiempoS))
-            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: distanciaS))
             
             initialVelocity = 1.0
             initialY = 0.0
@@ -182,14 +179,11 @@ class MainViewController: UIViewController {
             let shot = Shot(Double(velocity), 0, 0, Double(grados))
             shot.setUnits("ENGLISH")
             
-            let distancia = shot.xForTime(shot.finalTime())!
-            let distanciaS = String(format: "%.4f", distancia)
             let tiempo = shot.finalTime()
             let tiempoS = String(format: "%.2f", tiempo)
 
             question = question.replacingOccurrences(of: "GRADOS", with: String(grados))
             question = question.replacingOccurrences(of: "TIEMPO", with: String(describing: tiempoS))
-            question = question.replacingOccurrences(of: "DISTANCIA", with: String(describing: distanciaS))
             
             initialVelocity = 1.0
             initialY = 0.0

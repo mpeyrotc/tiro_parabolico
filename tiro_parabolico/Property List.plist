@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>Pregunta</key>
-		<string>Considerando que te encuentras en un edificio a una altura de ALTURA metros, si lanzas una pelota a una velocidad de VELOCIDAD metros por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo? Considera un ángulo de tiro de 0 grados y una distancia x inicial de 0 m.</string>
+		<string>Considerando que te encuentras en un edificio a una altura de ALTURA metros, si lanzas una pelota a un ángulo de 0 grados con la horizontal y a una velocidad de VELOCIDAD metros sobre segundo, ¿A qué distancia horizontal choca la pelota con el suelo, con respecto a la pared del edificio?</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Considerando que te encuentras en un edificio a una altura de ALTURA pies, si lanzas una pelota a una velocidad de VELOCIDAD pies por segundo, ¿Cuál es la distancia de la pared del edificio en el que se encuentra la pelota cuando choca contra el suelo? Considera un ángulo de tiro de 0 grados y un desplazamiento x inicial de 0 pies.</string>
+		<string>Considerando que te encuentras en un edificio a una altura de ALTURA pies, si lanzas una pelota a un ángulo de 0 grados con la horizontal y a una velocidad de VELOCIDAD pies sobre segundo, ¿A qué distancia horizontal choca la pelota con el suelo, con respecto a la pared del edificio?</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA metros, ¿Con qué velocidad salió del cañón? Considera los valores de X y Y iniciales como 0.</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos el proyectil se encuentra en el suelo, ¿Con qué velocidad salió del cañón? Considera los valores de X y Y iniciales como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos, el proyectil se encuentra en el suelo y a una distancia de DISTANCIA pies, ¿Con qué velocidad salió del cañón? Considera los valores iniciales de X y Y como 0.</string>
+		<string>Un proyectil es disparado por un cañón que tiene una inclinación de GRADOS grados. Si al cabo de TIEMPO segundos el proyectil se encuentra en el suelo, ¿Con qué velocidad salió del cañón? Considera los valores iniciales de X y Y como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
