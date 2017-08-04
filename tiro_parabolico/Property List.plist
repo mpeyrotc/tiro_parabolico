@@ -52,7 +52,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos? Considera que no tiene desplazamiento.</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos? Considera los valores iniciales de X y Y como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -60,7 +60,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos? Considera que no tiene desplazamiento.</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición x después de TIEMPO segundos? Considera los valores iniciales de X y Y como 0.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -68,7 +68,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos? Considere 0 metros de desplazamiento inicial.</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD m/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición después de TIEMPO segundos? Considere 0 metros de posición inicial.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
@@ -76,7 +76,7 @@
 	</dict>
 	<dict>
 		<key>Pregunta</key>
-		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición y después de TIEMPO segundos? Considere 0 pies de desplazamiento inicial.</string>
+		<string>Si un cañón ubicado en el suelo dispara una bala con una velocidad de VELOCIDAD f/s y un ángulo de GRADOS grados con respecto al suelo. ¿Cuál es su posición después de TIEMPO segundos? Considere 0 pies de posición inicial.</string>
 		<key>TYPE</key>
 		<string>DYNAMIC</string>
 		<key>SUBTYPE</key>
